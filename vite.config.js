@@ -7,5 +7,10 @@ export default defineConfig({
   root: "./src/react",
   build: {
     outDir: "../../public/dist"
+  },
+  server: {
+    proxy: {
+      '/api': 'http://localhost:80'
+    }
   }
 })
