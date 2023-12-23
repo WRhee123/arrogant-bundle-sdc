@@ -1,7 +1,9 @@
+import Banner from "./Banner.jsx"
+
 const App = () => {
     return (
         <>
-            <h1>Welcome to your new PERN project!</h1>
+            <Banner />
         </>
     )
 }

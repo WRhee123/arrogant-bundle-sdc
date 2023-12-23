@@ -4,9 +4,20 @@
     box-sizing: border-box;
 }
 
-body {
+#banner {
+    background-image: url('https://arrogant-bundle.onrender.com/images/backgrounds/header.jpg');
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 128px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 25px;
+    align-items: center;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 13px;
+    text-shadow: rgba(0, 0, 0, 0.65) 1px 1px 5px;
+    cursor: pointer;
+    text-decoration: none;
 }
