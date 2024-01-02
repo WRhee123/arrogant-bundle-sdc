@@ -7,14 +7,14 @@ const Footer = () => {
             </div>
 
             <div id="about">
-                <h2>ABOUT</h2>
+                <h4>ABOUT</h4>
                 <p>Blog</p>
                 <p>Developer</p>
                 <p>Support</p>
             </div>
 
             <div id="trending-games">
-                <h2>TRENDING GAMES</h2>
+                <h4>TRENDING GAMES</h4>
                 <a href="https://www.humblebundle.com/store/beamngdrive">
                     <p>BeamNG.drive</p>
                 </a>
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
 
             <div id="language-social">
-                <p>select language</p>
+                <p>Select Language</p>
                 <button>F</button>
                 <button>Twt</button>
                 <button>Inst</button>
