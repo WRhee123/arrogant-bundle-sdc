@@ -4,8 +4,9 @@ import CartModal from "./CartModal.jsx"
 const App = () => {
     return (
         <>
-            <Banner />
             <CartModal />
+            <Banner />
+            
         </>
     )
 }
