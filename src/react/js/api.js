@@ -1,5 +1,5 @@
 // This function performs a GET request for a single product
-const getProduct = async (id) => {
+const getProductData = async (id) => {
 
     // The url for performing the API request
     const url = `/api/products/${id}`
@@ -16,3 +16,5 @@ const getProduct = async (id) => {
     // Otherwise, return the product object (this is the data received)
     return data
 }
+
+export default getProductData

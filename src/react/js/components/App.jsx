@@ -7,28 +7,48 @@ import CriticalReception from "./AppContent/CriticalReception.jsx"
 import PopularCarousel from "./AppContent/PopularCarousel.jsx"
 import SystemReq from "./AppContent/SystemReq.jsx"
 import Footer from "./Footer.jsx"
-
+import { useState, useEffect } from "react"
+import getProductData from "../api.js"
 
 // TODO put the div containers into their own components
 // TODO Context API for all app images and text content?
 const App = () => {
-    return (
-        <>
-            <Banner />
-            <Navbar/>
-            <div className='body ctn'>
-                <div className="app-content ctn">
-                    <Hero/>
-                    <ProductDetails/>
-                    <ProductDescription/>
-                    <CriticalReception/>
-                    <PopularCarousel/>
-                    <SystemReq/>
-                </div> {/* end app-content ctn */}
-            </div> {/* end body ctn */}
-            <Footer/>
-        </>
-    )
+
+    const [isLoading, setIsLoading] = useState(true)
+    const [productData, setProductData] = useState({})
+
+    useEffect(() => {
+
+        const f = async () => {
+            const productData = await getProductData(1)
+            setProductData(productData)
+            setIsLoading(false)
+            console.log(productData)
+        }
+
+        f()
+
+    }, [])
+
+    if (!isLoading) {
+        return (
+            <>
+                <Banner />
+                <Navbar />
+                <div className='body ctn'>
+                    <div className="app-content ctn">
+                        <Hero />
+                        <ProductDetails />
+                        <ProductDescription />
+                        <CriticalReception criticalReceptions={productData.critical_receptions} />
+                        <PopularCarousel />
+                        <SystemReq systemRequirements={productData.system_requirements} />
+                    </div> {/* end app-content ctn */}
+                </div> {/* end body ctn */}
+                <Footer />
+            </>
+        )
+    }
 }
 
 export default App
