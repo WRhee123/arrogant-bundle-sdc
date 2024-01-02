@@ -1,3 +1,15 @@
+:root{
+    /* CSS HEX Humble Pallette
+    - use via: cssProperty: var(--jet)
+    */
+    --apple-green: #8EA940ff;
+    --raisin-black: #252830ff;
+    --eerie-black: #191B19ff;
+    --jet: #2A2B29ff;
+    --french-gray: #D0D3D9ff;
+    --onyx: #363942ff;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -20,4 +32,16 @@
     text-shadow: rgba(0, 0, 0, 0.65) 1px 1px 5px;
     cursor: pointer;
     text-decoration: none;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: var(--jet);
+    color: var(--french-gray);
+    text-decoration: none;
+    font-size: 13px;
+    text-shadow: rgba(0, 0, 0, 0.65) 1px 1px 5px;
 }
