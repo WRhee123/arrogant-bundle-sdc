@@ -1,7 +1,63 @@
+:root{
+    /* CSS HEX Humble Pallette
+    - use via: cssProperty: var(--jet)
+    */
+    --apple-green: #8EA940ff;
+    --raisin-black: #252830ff;
+    --eerie-black: #191B19ff;
+    --jet: #2A2B29ff;
+    --french-gray: #D0D3D9ff;
+    --onyx: #363942ff;
+}
+
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+}
+
+h1{
+    color: lightgray;
+}
+
+.body{
+    width:100%;
+    background-color: var(--raisin-black);
+}
+
+.app-content{
+    /* width:80%; */
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+/* for dev purposes to display flex areas */
+.ctn{
+    border: 1px solid rgb(116, 114, 114);
+    /* width:100%; */
+}
+
+.nav{
+    position:sticky;
+    background-color: var(--onyx);
+    color: white;
+    z-index:300;
+    top:0;
+}
+
+.nav-links{
+    height:60px;
+    z-index:200;
+}
+.nav hr{
+    background-color: var(--raisin-black);
+    height:1px;
+
+}
+
+.charity-nav{
+    height:50px;
 }
 
 #banner {
@@ -58,4 +114,74 @@
     color: #494f5c;
     font-weight: 200;
     margin-top: 20px;
+}
+
+.hero{
+    background-color: var(--raisin-black);
+    color: white;
+    height: 681px;
+}
+
+.hero-content{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.product-hero {
+    margin: 2rem auto;
+    display:flex;
+    flex-flow: row wrap;
+}
+
+.product-details{
+    color: var(--french-gray)
+}
+.product-details-content{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.product-description{
+    display:flex;
+    flex-flow: column nowrap;
+    background-color: var(--french-gray);
+}
+
+.product-description-content{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.product-description p{
+    margin-bottom: 1rem;
+}
+
+.critical-reception{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.popular-carousel{
+    background-color: var(--onyx);
+    width:100%;
+}
+
+.popCarousel-contents{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.system-req{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.footer{
+    background-color: var(--onyx);
+}
+
+.footer-contents{
+    max-width: 93.75rem;
+    margin: 0 auto;
 }
