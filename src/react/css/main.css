@@ -79,10 +79,10 @@ h1{
 }
 
 /*CART MODAL ============================================*/
-#cart-modal {
+#curtain-modal {
     background-color: rgb(59, 59, 59, .4);
     z-index: 9999;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     display: flex;
@@ -91,17 +91,18 @@ h1{
 }
 
 #cart {
-    height: 100vh;
+    height: 70vh;
     width: 880px;
-    border: 2px dashed orange;
+    border: none;
     position: relative;
     display: flex;
     flex-direction: column;
     background-color: rgb(230, 230, 230);
+    margin-top: -200px;
 }
 
 #cart-header {
-    border: 2px dashed orange;
+    border-bottom: 1px solid rgb(180, 180, 180);
     height: 75px;
     width: 100%;
     background-color: rgb(214, 214, 214);
@@ -110,10 +111,30 @@ h1{
 }
 
 #cart-h1 {
-    font-size: 26px;
+    font-size: 24px;
     color: #494f5c;
     font-weight: 200;
     margin-top: 20px;
+}
+
+#cart-holder {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+    height: 60px;
+}
+
+#cart-checkout {
+    color: #494f5c;
+    text-align: center;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: rgb(214, 214, 214);
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero{

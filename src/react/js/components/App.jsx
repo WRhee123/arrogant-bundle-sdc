@@ -1,5 +1,5 @@
 import Banner from "./Banner.jsx"
-import CartModal from "./CartModal.jsx"
+import CurtainModal from "./CurtainModal.jsx"
 import Navbar from "./NavBar.jsx"
 import Hero from "./AppContent/Hero.jsx"
 import ProductDetails from "./AppContent/ProductDetails.jsx"
@@ -15,7 +15,7 @@ import Footer from "./Footer.jsx"
 const App = () => {
     return (
         <>
-            {/* <CartModal /> */}
+            <CurtainModal />
             <Banner />
             
             <Navbar/>
