@@ -1,15 +1,33 @@
-const Hero = () => {
+import HeroCarousel from "./HeroCarousel";
+
+const Hero = ({productData}) => {
+
+    const {title, 
+        thumbnail_link: thumbs, 
+        price, 
+        humble_choice_savings: savings,
+        gameplay_image_links: images,
+    } = productData;
+
+    console.log({images})
 
     return (
     <>
-        <div className="hero ctn">
-            <div className="hero-content">
-                <h1>hero</h1>
-                <div className='product-hero ctn'>
-                    <h2>Super Mario RPG</h2>
+        <div id='hero' className="ctn">
+            <div id="hero-content">
+                <div id='product-hero' className='ctn'>
+                    <div className="product-title">
+                        <h2>{title}</h2>
+                    </div>
+                    <div className="main-carousel-img">
+                        <img src={`https://arrogant-bundle.onrender.com/${images[0]}`}/>
+                    </div>
+                    <div className="shop-section">
+                        <img src={`https://arrogant-bundle.onrender.com/${thumbs}`} alt={title} />
+                    </div>
                 </div>
-                <div className='main-carousel ctn'>
-                    <h1>main-carousel</h1>
+                <div id='hero-carousel' className='ctn'>
+                    {/* <HeroCarousel/> */}
                 </div>
             </div>
         </div>
