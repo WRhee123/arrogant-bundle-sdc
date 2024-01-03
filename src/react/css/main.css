@@ -15,6 +15,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1{
@@ -79,7 +80,6 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
     font-size: 13px;
     text-shadow: rgba(0, 0, 0, 0.65) 1px 1px 5px;
@@ -89,67 +89,127 @@ h1{
 
 
 
-/*--------------------------HERO SECTION */
+/*-------------------------- HERO SECTION */
 #hero{
     background-color: var(--raisin-black);
     color: white;
-    height: 681px;
-    max-width: 1500px;
+    height: 850px;
+    min-width: 1140px;
     margin: 0 auto;
+    margin-top:4rem;
 }
 
 #hero-content{
     display:flex;
     flex-flow: column nowrap;
     width:100%;
-    gap: 2rem;
 }
 
 #product-hero {
     margin: 2rem auto;
     display:flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     width:100%;
+    gap:2rem;
 }
 
 .product-title{
-    font-size:2rem;
+    font-size:1.8rem;
+    color:var(--french-gray);
+    font-weight:bold;
     width:100%;
+    text-transform: uppercase;
 }
 
 .main-carousel-img{
-    width:425px;
+    width:750px;
     height: auto;
 }
 
 #mini-product{
+    width: 375px;
     display:flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    background-color: var(--eerie-black);
 }
+
+.itemlogo{
+    width:90px;
+    object-fit: contain;
+}
+
+.thumbnail{
+    width:375px;
+    object-fit: contain;
+}
+
+.product-showcase{
+    padding: .6rem 1rem .8rem;
+    display: flex;
+    flex-flow: column wrap;
+    gap: .5rem;
+    /* max-width: 39rem; */
+}
+
 .price{
     display:flex;
     justify-content: end;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .savings{
-
+    background-color: black;
+    font-size: 1rem;
+    padding: 1rem .75rem;
+    font-weight: bolder;
+    text-wrap: wrap;
+    text-align: center;
 }
 
-#addToCart{
+#checkoutBtn{
     background-color: var(--apple-green);
+    border-radius: 2px;
     color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 1rem .5rem;
+    position: relative;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    text-shadow: 0 3px 0 rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    transition: all 0.35s linear;
 }
-#addWishList{
+
+#checkoutBtn:hover{
+    background-color: rgba(143, 169, 64, 0.616);;
+}
+
+
+#wishListBtn{
     background-color: var(--onyx);
+    color: darkgray;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 0.40rem;
+    text-shadow: 0 3px 0 rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.35s linear;
+    text-align: center;
 }
 
+#wishListBtn:hover{
+    color: var(--gold);
+}
 
+/* ----------------------------------------- HERO CAROUSEL */
 
 #hero-carousel {
 
 }
-
-
 
 
 /* -------------------------- PRODUCT DETAILS SECTION */
