@@ -106,13 +106,21 @@ h1{
     height: 75px;
     width: 100%;
     background-color: #e6e9ef;
-    text-align: center;
     color: #242424;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
 }
 #cart-h1 {
     font-size: 24px;
     color: #494f5c;
-    margin-top: 20px;
+    margin-right: 310px;
+}
+#close-circle {
+    color: rgb(179, 179, 179);
+    margin-top: -20px;
+    margin-right: 5px;
 }
 
 #cart-holder {
@@ -147,7 +155,9 @@ h1{
 #cart-terms {
     font-size: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin: 2em;
 }
 #cart-p {
     color: #494f5c;
@@ -173,8 +183,19 @@ h1{
     padding: 1em;
     font-weight: bold;
     text-shadow: 0 1px 2px gray;
+    cursor: pointer;
 }
-/* END OF CART MODAL CSS============================== */
+#purchase-btn:hover {
+    background-color: #0074aa;
+}
+
+.cart-p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+/* END OF CART MODAL CSS==============================*/
 
 .hero{
     background-color: var(--raisin-black);
