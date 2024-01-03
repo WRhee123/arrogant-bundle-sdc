@@ -34,10 +34,11 @@ const Hero = ({productData}) => {
                             {price}
                         </div>
                         <div className="savings">
-                            {`SAVE UP TO $${(savings).toFixed(2)} MORE WITH HUMBLE CHOICE`}
+                            SAVE UP TO <span className="humble-green">${(savings).toFixed(2)} </span>
+                            MORE WITH <span className="humble-gold">HUMBLE CHOICE</span>
                         </div>
-                        <button>ADD TO CART</button>
-                        <button>ADD TO WISHLIST</button>
+                        <button id='addToCart'>ADD TO CART</button>
+                        <button id='addWishList'>ADD TO WISHLIST</button>
                     </div>
                 </div>
                 <div id='hero-carousel' className='ctn'>

@@ -8,6 +8,7 @@
     --jet: #2A2B29ff;
     --french-gray: #D0D3D9ff;
     --onyx: #363942ff;
+    --gold: #ef9943;
 }
 
 * {
@@ -18,6 +19,14 @@
 
 h1{
     color: lightgray;
+}
+
+.humble-gold{
+    color: var(--gold);
+}
+
+.humble-green{
+    color:var(--apple-green);
 }
 
 .body{
@@ -121,6 +130,20 @@ h1{
     display:flex;
     justify-content: end;
 }
+
+.savings{
+
+}
+
+#addToCart{
+    background-color: var(--apple-green);
+    color: white;
+}
+#addWishList{
+    background-color: var(--onyx);
+}
+
+
 
 #hero-carousel {
 
