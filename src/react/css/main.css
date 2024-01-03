@@ -8,16 +8,14 @@
     --jet: #2A2B29ff;
     --french-gray: #D0D3D9ff;
     --onyx: #363942ff;
+    --gold: #ef9943;
 }
 
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-}
-
-h1{
-    color: lightgray;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .body{
@@ -141,6 +139,8 @@ h1{
 
 .footer{
     background-color: var(--onyx);
+    color: var(--french-gray);
+    font-size: 13px;
 }
 
 .footer-contents{
@@ -149,9 +149,22 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: var(--onyx);
-    color: var(--french-gray);
+    
+}
+
+.links, .refer-link {
     text-decoration: none;
-    font-size: 13px;
+    color: inherit;
+}
+
+.links:hover {
+    color: white;
+}
+
+.info-links-list, .trending-games-list, .language-list, .legal-links-list {
+    list-style-type: none;
+}
+
+.refer-link {
+    color: var(--gold);
 }
