@@ -4,8 +4,8 @@
 
 const CartFooter = () => {
   return (
-    <div>
-      
+    <div id='cart-footer' >
+      <button id='purchase-btn' >Purchase</button>
     </div>
   )
 }

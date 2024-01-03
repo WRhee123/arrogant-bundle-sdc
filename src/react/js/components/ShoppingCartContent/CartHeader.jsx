@@ -4,8 +4,8 @@
 
 const CartHeader = () => {
   return (
-    <div>
-      
+    <div id='cart-header' >
+      <h1 id='cart-h1' >Shopping Cart</h1>
     </div>
   )
 }
