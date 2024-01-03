@@ -91,14 +91,13 @@ h1{
 }
 
 #cart {
-    height: 70vh;
+    height: max-content;
     width: 880px;
     border: none;
     position: relative;
     display: flex;
     flex-direction: column;
     background-color: #eff2fb;
-    margin-top: -200px;
 }
 
 #cart-header {
@@ -128,7 +127,7 @@ h1{
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    height: 60px;
+    height: fit-content;
 }
 #holder-h1 {
     color: #494f5c;
@@ -158,6 +157,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     margin: 2em;
+    gap: 7px;
 }
 #cart-p {
     color: #494f5c;
@@ -194,6 +194,69 @@ h1{
     margin-top: 10px;
 }
 
+#purchase-top {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border-bottom: #494f5c;
+    margin: .5em;
+}
+#purchase-topA {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 8px;
+}
+#purchase-topA > h1 {
+    color: #494f5c;
+}
+#purchase-topB {
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    color: #ff6f00;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-left: 2.5em;
+}
+
+#purchase-mid {
+    display: flex;
+    flex-direction: column;
+    height: fit-content; 
+    border-top: 1px solid gray;
+}
+#purchase-mid > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#purchase-mid > div > h1 {
+    color: #494f5c;
+    font-size: 15px;
+    margin: .5em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#purchase-bottom {
+    background-image: url('https://cdn.humblebundle.com/static/hashed/bc89c6dc0aa0523334a5c50035a45a67aa543f40.jpg');
+    color: white;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#purchase-bottom > h1 {
+    color: white;
+    font-size: 25px;
+}
+#purchase-bottom > p {
+    font-size: 14px;
+    margin-top: 2em;
+}
 
 /* END OF CART MODAL CSS==============================*/
 
