@@ -85,19 +85,43 @@ h1{
     background-color: var(--raisin-black);
     color: white;
     height: 681px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 #hero-content{
-    max-width: 1140px;
-    margin: 0 auto;
+    display:flex;
+    flex-flow: column nowrap;
+    width:100%;
+    gap: 2rem;
 }
 
 #product-hero {
     margin: 2rem auto;
     display:flex;
-    flex-flow: row nowrap;
-
+    flex-flow: row wrap;
+    width:100%;
 }
+
+.product-title{
+    font-size:2rem;
+    width:100%;
+}
+
+.main-carousel-img{
+    width:425px;
+    height: auto;
+}
+
+#mini-product{
+    display:flex;
+    flex-flow: column wrap;
+}
+.price{
+    display:flex;
+    justify-content: end;
+}
+
 #hero-carousel {
 
 }
