@@ -96,7 +96,7 @@ h1{
     height: 850px;
     min-width: 1140px;
     margin: 0 auto;
-    margin-top:4rem;
+    margin-top:2.5rem;
 }
 
 #hero-content{
@@ -106,15 +106,15 @@ h1{
 }
 
 #product-hero {
-    margin: 2rem auto;
+    margin: 1rem auto;
     display:flex;
     flex-flow: row nowrap;
     width:100%;
-    gap:2rem;
+    gap:1rem;
 }
 
 .product-title{
-    font-size:1.8rem;
+    font-size:1.2rem;
     color:var(--french-gray);
     font-weight:bold;
     width:100%;

@@ -1,0 +1,34 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 900px;
+}
+
+.carousel-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+
+}
+
+img {
+    width: 200px; /* Ensure images cover the entire item */
+    height: auto; /* Maintain aspect ratio */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* additional styling for buttons */
+}
+
+button:first-of-type {
+    left: 10px;
+}
+
+button:last-of-type {
+    right: 10px;
+}

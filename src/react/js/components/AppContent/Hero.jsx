@@ -22,6 +22,7 @@ const Hero = ({productData}) => {
                         <h2>{title}</h2>
                 </div>
                 <div id='product-hero'>
+                    {/* add overflow hidden, map the images array*/}
                     <div className="main-img">
                         <img src={`https://arrogant-bundle.onrender.com/${images[0]}`} className="main-carousel-img"/>
                     </div>
@@ -48,7 +49,7 @@ const Hero = ({productData}) => {
                     </div>
                 </div>
                 <div id='hero-carousel' className='ctn'>
-                    <HeroCarousel/>
+                    <HeroCarousel images={images}/>
                 </div>
             </div> {/* end hero-content */}
         </div>
