@@ -1,6 +1,7 @@
 import { FaShoppingCart } from "react-icons/fa";
 import { TbStarFilled } from "react-icons/tb";
 import HeroCarousel from './HeroCarousel';
+import '../../../css/hero.css';
 
 const Hero = ({productData}) => {
 
@@ -32,11 +33,13 @@ const Hero = ({productData}) => {
                         </div>
                         
                         <div className="product-showcase">
-                            <div className="itemlogo-ctn">
-                                <img src={`https://arrogant-bundle.onrender.com${platImg[0].image_link}`} className="itemlogo" />
-                            </div>
-                            <div className="price">
-                                ${price}
+                            <div className="logoPrice">
+                                <div className="itemlogo-ctn">
+                                    <img src={`https://arrogant-bundle.onrender.com${platImg[0].image_link}`} className="itemlogo" />
+                                </div>
+                                <div className="price">
+                                    ${price}
+                                </div>
                             </div>
                             <div className="savings">
                                 SAVE UP TO <span className="humble-green">${(savings).toFixed(2)} </span>
@@ -48,7 +51,7 @@ const Hero = ({productData}) => {
                         
                     </div>
                 </div>
-                <div id='hero-carousel' className='ctn'>
+                <div id='hero-carousel'>
                     <HeroCarousel images={images}/>
                 </div>
             </div> {/* end hero-content */}
