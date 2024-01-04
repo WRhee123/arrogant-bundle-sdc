@@ -17,7 +17,7 @@ import ShoppingCartProvider from "./ShoppingCartContext/ShoppingCartProvider.jsx
 const App = () => {
     return (
         <>
-        <ShoppingCartContext>
+        <ShoppingCartProvider>
             <CurtainModal />
             <Banner />
             
@@ -33,7 +33,7 @@ const App = () => {
                 </div> {/* end app-content ctn */}
             </div> {/* end body ctn */}
             <Footer/>
-        </ShoppingCartContext>
+        </ShoppingCartProvider>
         </>
     )
 }
