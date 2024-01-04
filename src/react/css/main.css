@@ -8,6 +8,7 @@
     --jet: #2A2B29ff;
     --french-gray: #D0D3D9ff;
     --onyx: #363942ff;
+    --gold: #ef9943;
 }
 
 * {
@@ -19,6 +20,14 @@
 
 h1{
     color: lightgray;
+}
+
+.humble-gold{
+    color: var(--gold);
+}
+
+.humble-green{
+    color:var(--apple-green);
 }
 
 .body{
@@ -71,7 +80,6 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
     font-size: 13px;
     text-shadow: rgba(0, 0, 0, 0.65) 1px 1px 5px;
@@ -315,6 +323,7 @@ h1{
     flex-flow: row wrap;
 }
 
+/* -------------------------- PRODUCT DETAILS SECTION */
 .product-details{
     color: var(--french-gray)
 }
