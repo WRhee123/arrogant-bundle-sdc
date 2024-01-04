@@ -118,8 +118,9 @@ h1{
 }
 #cart-h1 {
     font-size: 24px;
+    font-weight: 100;
     color: #494f5c;
-    margin-right: 310px;
+    margin-right: 320px;
 }
 #close-circle {
     color: rgb(179, 179, 179);
@@ -135,11 +136,6 @@ h1{
     height: fit-content;
     min-height: 57px;
 }
-#holder-h1 {
-    color: #494f5c;
-    font-size: 17px;
-}
-
 
 #cart-checkout {
     color: #494f5c;
@@ -155,6 +151,7 @@ h1{
 #checkout-h1 {
     color: #494f5c;
     font-size: 26px;
+    font-weight: 100;
 }
 
 #cart-terms {
@@ -200,7 +197,9 @@ h1{
 
 #purchase-div > h1 {
     font-size: 17px;
-    color: #444542;
+    color: #494f5c;
+    font-weight: 100;
+    opacity: .7;
 }
 
 #purchase-top {
@@ -295,11 +294,6 @@ h1{
     color: black;
     border: 1px solid #b38a22;
     font-size: 13px
-}
-
-#empty-cart {
-    font-size: 17px;
-    color: #444542;
 }
 
 /* END OF CART MODAL CSS==============================*/
