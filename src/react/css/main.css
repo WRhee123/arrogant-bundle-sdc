@@ -176,29 +176,43 @@
     font-size: inherit;
     border: 1px solid ;
     cursor: pointer;
+    border-radius: 5px;
+    min-width: 160px;
+    margin: 5px;
   }
   
-  .dropdown {
+  .language-dropdown-container {
     position: relative;
     display: inline-block;
   }
   
-  .dropdown-content {
-    display: none;
+  .language-container {
+    margin-top: 10px;
+    display: block;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: gray;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 5px;
+    border: 2px solid white;
   }
   
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+  .language-container li {
+    padding: 2px;
     text-decoration: none;
     display: block;
   }
   
-  .dropdown a:hover {background-color: #ddd;}
+  .language-container li:hover {background-color: var(--onyx);}
+
+  .js-change-language {
+    background-color: inherit;
+    color: white;
+    padding: 5px;
+    font-size: inherit;
+    border: 0px;
+    cursor: pointer;
+  }
   

@@ -1,41 +1,42 @@
+import { useState, useEffect } from "react"
+import FooterLanguagesDropdown from "./FooterLanguagesDropdown";
 
 const FooterLanguage = () => {
-    
+
+    const [dropdownVisible, setDropdownVisible] = useState(false);
+
+    const handleButtonClick = (e) => {
+        setDropdownVisible(true);
+    };
+
+    const handleOutsideClick = (e) => {
+        console.log(e.target.value)
+        if (!e.target.matches('.js-language-dropdown')) {
+
+        setDropdownVisible(false);
+        }
+    };
+
+    useEffect(() => {
+        // Add event listener when the component mounts
+        window.addEventListener('click', handleOutsideClick);
+
+        // Cleanup the event listener when the component unmounts
+        return () => {
+        window.removeEventListener('click', handleOutsideClick);
+        };
+    }, []); // The empty dependency array ensures this effect runs only once, similar to componentDidMount
+
     return (
         <>
         <div className="language-dropdown-container">
-            <button className="js-language-dropdown">
-            <p> Language: English</p>
+            <button onClick={handleButtonClick} className="js-language-dropdown">
+            Language: English
             </button>
-        <div className="language-container js-language-container">
-            <ul className="language-list">
-
-            <li className="">
-            <button data-locale="fr" className="js-change-language no-style-button">Français</button>
-            </li>
-
-            <li className=" active ">
-            <button data-locale="en" className="js-change-language no-style-button">English</button>
-            </li>
-
-            <li className="">
-            <button data-locale="zh_CN" className="js-change-language no-style-button">简体中文</button>
-            </li>
-
-            <li className="">
-            <button data-locale="de" className="js-change-language no-style-button">Deutsch</button>
-            </li>
-
-            <li className="">
-            <button data-locale="it" className="js-change-language no-style-button">Italiano</button>
-            </li>
-
-            <li className="">
-            <button data-locale="es" className="js-change-language no-style-button">Español</button>
-            </li>
-
-            </ul>
-        </div>
+        { dropdownVisible && (
+            <FooterLanguagesDropdown />
+        ) } 
+        
         </div>
         </>
     )

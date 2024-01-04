@@ -14,7 +14,7 @@ const FooterLegal = () => {
             <ul className="legal-links-list">
             <li>
                 <a href="https://www.humblebundle.com/store/super-mario-rpg-switch?hmb_source=humble_home&hmb_medium=product_tile&hmb_campaign=mosaic_section_2_layout_index_2_layout_type_carousel_tile_index_1_c_supermariorpg_switch_storefront#" 
-                className="links" onclick="window.zdconsent.showConsentTool(event);">
+                className="links" >
                 <img src="https://cdn.ziffstatic.com/pub/icong1.png" /> AdChoices </a>
             </li>
             <li><a href="https://dsar.humblebundle.com/" className="links">Do Not Sell My Personal Information</a></li>
