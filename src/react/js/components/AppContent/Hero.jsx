@@ -17,6 +17,14 @@ const Hero = ({productData}) => {
         platforms,
     } = productData;
 
+    const shopClick = () => {
+        console.log('shop clicked')
+    }
+
+    const wishClick = () => {
+        console.log('wishList clicked')
+    }
+
     return (
     <>
         <div id='hero'>
@@ -48,8 +56,8 @@ const Hero = ({productData}) => {
                                 SAVE UP TO <span className="humble-green">${(savings).toFixed(2)} </span>
                                 MORE WITH <span className="humble-gold">HUMBLE CHOICE</span>
                             </div>
-                            <div id='checkoutBtn'><span><FaShoppingCart/> </span>CHECKOUT</div>
-                            <div id='wishListBtn'><span><TbStarFilled/> </span>ADD TO WISHLIST</div>
+                            <div id='checkoutBtn' onClick={()=>shopClick()}><span><FaShoppingCart/> </span>CHECKOUT</div>
+                            <div id='wishListBtn' onClick={()=>wishClick()}><span><TbStarFilled/> </span>ADD TO WISHLIST</div>
                         </div>
                         
                     </div>
