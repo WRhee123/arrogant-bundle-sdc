@@ -37,7 +37,7 @@ const App = () => {
                 <Navbar />
                 <div className='body ctn'>
                     <div className="app-content ctn">
-                        <Hero />
+                        <Hero productData={productData} />
                         <ProductDetails />
                         <ProductDescription />
                         <CriticalReception criticalReceptions={productData.critical_receptions} />
