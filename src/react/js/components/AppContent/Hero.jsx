@@ -10,7 +10,7 @@ const Hero = ({productData}) => {
         price, 
         humble_choice_savings: savings,
         gameplay_image_links: images,
-        platforms: platImg,
+        platforms,
     } = productData;
 
     // console.log({images})
@@ -35,7 +35,7 @@ const Hero = ({productData}) => {
                         <div className="product-showcase">
                             <div className="logoPrice">
                                 <div className="itemlogo-ctn">
-                                    <img src={`https://arrogant-bundle.onrender.com${platImg[0].image_link}`} className="itemlogo" />
+                                    <img src={`https://arrogant-bundle.onrender.com${platforms[0].image_link}`} className="itemlogo" />
                                 </div>
                                 <div className="price">
                                     ${price}
