@@ -1,9 +1,13 @@
+import { useState, useRef } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { TbStarFilled } from "react-icons/tb";
 import HeroCarousel from './HeroCarousel';
 import '../../../css/hero.css';
 
 const Hero = ({productData}) => {
+
+    const [currentIndex, setCurrentIndex] = useState(0); //carousel index
+    const imageRef = useRef(null)
 
     const {title, 
         thumbnail_link: thumbs, 
@@ -13,8 +17,6 @@ const Hero = ({productData}) => {
         platforms,
     } = productData;
 
-    // console.log({images})
-
     return (
     <>
         <div id='hero'>
@@ -23,9 +25,10 @@ const Hero = ({productData}) => {
                         <h2>{title}</h2>
                 </div>
                 <div id='product-hero'>
-                    {/* add overflow hidden, map the images array*/}
                     <div className="main-img">
-                        <img src={`https://arrogant-bundle.onrender.com/${images[0]}`} className="main-carousel-img"/>
+                        <img src={`https://arrogant-bundle.onrender.com/${images[currentIndex]}`} className="main-carousel-img"
+                        ref={imageRef}
+                        />
                     </div>
                     <div id='mini-product'>
                         <div className='thumbnail-ctn'>
@@ -52,10 +55,13 @@ const Hero = ({productData}) => {
                     </div>
                 </div>
                 <div id='hero-carousel'>
-                    <HeroCarousel images={images}/>
+                    <HeroCarousel 
+                    images={images} 
+                    setCurrentIndex={setCurrentIndex} 
+                    currentIndex={currentIndex}/>
                 </div>
             </div> {/* end hero-content */}
-        </div>
+        </div> {/* end hero div */}
     </>
 
     )

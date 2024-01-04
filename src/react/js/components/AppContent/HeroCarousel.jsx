@@ -1,10 +1,9 @@
-import { useState, useRef} from 'react';
+import { useRef} from 'react';
 import '../../../css/herocarousel.css';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
-const HeroCarousel = ({images}) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const imageRef = useRef(null);
+const HeroCarousel = ({images, setCurrentIndex, currentIndex}) => {
+    const imageRef = useRef(null); // for horizontal scroll according to image width
   
     const handleClick = (index) => {
       setCurrentIndex(index);
@@ -19,6 +18,7 @@ const HeroCarousel = ({images}) => {
     };
   
     const imageWidth = imageRef.current ? imageRef.current.offsetWidth : 0;
+    const gapWidth = 15;
   
     return (
         <>
@@ -27,19 +27,19 @@ const HeroCarousel = ({images}) => {
                 <div className="nav-button next" onClick={nextImage}>{<FaChevronRight/>}</div>
                 <div className="carousel-container">
                     <div
-                    className="image-wrapper"
-                    style={{ transform: `translateX(-${currentIndex * imageWidth}px)` }}
+                      className="image-wrapper"
+                      style={{ transform: `translateX(-${currentIndex * (imageWidth + gapWidth)}px)` }}
                     >
-                    {images.map((image, index) => (
-                        <img
-                        key={index}
-                        className={`carousel-image ${index === currentIndex ? 'active' : ''}`}
-                        src={`https://arrogant-bundle.onrender.com${image}`}
-                        alt={`Image ${index + 1}`}
-                        onClick={() => handleClick(index)}
-                        ref={index === 0 ? imageRef : null}
-                        />
-                    ))}
+                      {images.map((image, index) => (
+                          <img
+                          key={index}
+                          className={`carousel-image ${index === currentIndex ? 'active' : ''}`}
+                          src={`https://arrogant-bundle.onrender.com${image}`}
+                          alt={`Image ${index + 1}`}
+                          onClick={() => handleClick(index)}
+                          ref={index === 0 ? imageRef : null}
+                          />
+                      ))}
                     </div>
                 </div>
             </div>
