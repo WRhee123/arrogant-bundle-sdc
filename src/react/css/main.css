@@ -14,6 +14,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1{
@@ -86,15 +87,17 @@ h1{
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    overflow: auto;
 }
 
 #cart {
-    height: max-content;
+    height: fit-content;
     width: 880px;
     border: none;
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: column;
     background-color: #eff2fb;
@@ -109,7 +112,6 @@ h1{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
 }
 #cart-h1 {
     font-size: 24px;
@@ -211,7 +213,7 @@ h1{
     color: #494f5c;
 }
 #purchase-topB {
-    font-size: 10px;
+    font-size: 16px;
     display: flex;
     flex-direction: row;
     color: #ff6f00;
@@ -256,6 +258,21 @@ h1{
 #purchase-bottom > p {
     font-size: 14px;
     margin-top: 2em;
+}
+
+#cart-footer > button {
+    background-color: #009de6;
+    margin-top: 30px;
+    height: 50px;
+    width: 90%;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    padding: 1em;
+    font-weight: bold;
+    text-shadow: 0 1px 2px gray;
+    cursor: pointer;
 }
 
 /* END OF CART MODAL CSS==============================*/

@@ -2,11 +2,12 @@
 
 import { IoCloseCircleSharp } from "react-icons/io5";
 
+
 const PurchaseTop = () => {
   return (
     <div id='purchase-top' >
       <div id='purchase-topA'>
-        <h1>Super Marion RPG</h1>
+        <h1>Super Mario RPG</h1>
         <h1>$59.99</h1>
       </div>
       <div id='purchase-topB'>
