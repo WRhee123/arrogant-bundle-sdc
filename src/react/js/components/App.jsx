@@ -8,6 +8,8 @@ import CriticalReception from "./AppContent/CriticalReception.jsx"
 import PopularCarousel from "./AppContent/PopularCarousel.jsx"
 import SystemReq from "./AppContent/SystemReq.jsx"
 import Footer from "./Footer.jsx"
+import ShoppingCartContext from "./ShoppingCartContext/ShoppingCartContext.mjs"
+import ShoppingCartProvider from "./ShoppingCartContext/ShoppingCartProvider.jsx"
 
 
 // TODO put the div containers into their own components
@@ -15,6 +17,7 @@ import Footer from "./Footer.jsx"
 const App = () => {
     return (
         <>
+        <ShoppingCartContext>
             <CurtainModal />
             <Banner />
             
@@ -30,6 +33,7 @@ const App = () => {
                 </div> {/* end app-content ctn */}
             </div> {/* end body ctn */}
             <Footer/>
+        </ShoppingCartContext>
         </>
     )
 }
