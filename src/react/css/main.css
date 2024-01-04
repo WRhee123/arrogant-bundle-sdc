@@ -81,7 +81,7 @@ h1{
 
 /*CART MODAL ============================================*/
 #curtain-modal {
-    background-color: rgb(59, 59, 59, .4);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 9999;
     position: fixed;
     height: 100%;
@@ -97,10 +97,11 @@ h1{
     height: fit-content;
     width: 880px;
     border: none;
-    position: fixed;
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: #eff2fb;
+    overflow: auto;
 }
 
 #cart-header {
@@ -160,9 +161,6 @@ h1{
     justify-content: center;
     margin: 2em;
     gap: 7px;
-}
-#cart-p {
-    color: #494f5c;
 }
 
 #cart-footer {
@@ -261,18 +259,38 @@ h1{
 }
 
 #cart-footer > button {
-    background-color: #009de6;
-    margin-top: 30px;
+    margin-top: 10px;
     height: 50px;
     width: 90%;
-    border: none;
     border-radius: 3px;
-    color: white;
     font-size: 14px;
     padding: 1em;
-    font-weight: bold;
-    text-shadow: 0 1px 2px gray;
     cursor: pointer;
+}
+
+#paypal {
+    background-color: #ffab02;
+    color: #444542;
+    border: none;
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1), inset 0px 0px 0px 1px #c68100, inset 0px 2px 0px 0px rgba(255,255,255,0.6);
+}
+#paypal:hover {
+    background: linear-gradient(-180deg, #ffeebf 0%, #ffd359 100%);
+}
+#klarna {
+    background-color: white;
+}
+#amazon {
+    background: linear-gradient(-180deg, #ffeebf 0%, #ffd359 100%);
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1);
+    color: black;
+    border: 1px solid #b38a22;
+    font-size: 13px
+}
+
+#empty-cart {
+    font-size: 17px;
+    color: #444542;
 }
 
 /* END OF CART MODAL CSS==============================*/
