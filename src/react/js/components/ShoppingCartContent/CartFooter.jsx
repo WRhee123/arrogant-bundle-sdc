@@ -1,22 +1,24 @@
 
-import { useState } from "react"
+import { useState, useContext } from "react"
+import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext.mjs"
 
 const CartFooter = () => {
 
-  const [item, setItem] = useState(true);
-
-  const handleGame = () => {
-    setItem(false)
-  }
+  const {
+    cartItem
+  } = useContext(ShoppingCartContext)
 
   return (
     <div id='cart-footer' >
-      <button onClick={handleGame} id='purchase-btn' >Purchase</button>{item ? ( <><button id='paypal' >Pay with PayPal</button>
+      <button id='purchase-btn' >{cartItem ? 'Pay with card' : 'Purchase' }</button>
+      {cartItem ? (
+      <>
+      <button id='paypal' >Pay with PayPal</button>
       <button id='klarna' >Shop now. Pay over time with Klarna</button>
       <h4>$29.99 minimum payment</h4>
       <button id='amazon' >Pay with Amazon</button>
-      <button id='aliplay' >Alipay</button> </>) : (<h1>empty</h1>) }
-      
+      <button id='aliplay' >Alipay</button>
+      </>) : '' } 
     </div>
   )
 }

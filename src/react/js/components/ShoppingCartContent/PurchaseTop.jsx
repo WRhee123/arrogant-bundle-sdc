@@ -1,22 +1,18 @@
 
 
 import { IoCloseCircleSharp } from "react-icons/io5";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext.mjs";
 
 const PurchaseTop = () => {
-    const [cart, setCart] = useState(true);
-
-    const handleCart = () => {
-        setCart(!cart)
-        console.log(cart)
-      }
+  const {
+    handleCartItem
+  } = useContext(ShoppingCartContext)
 
       return (
-        <div onClick={handleCart} id='purchase-top'>
-          {cart ? (
-            <>
+        <div id='purchase-top'>
               <div id='purchase-topA'>
-                <h1>Super Mario RPG</h1>
+                <h1><IoCloseCircleSharp onClick={handleCartItem}/>Super Mario RPG</h1>
                 <h1>$59.99</h1>
               </div>
               <div id='purchase-topB'>
@@ -26,10 +22,6 @@ const PurchaseTop = () => {
                   Not eligible for Humble Rewards or charity contribution
                 </p>
               </div>
-            </>
-          ) : (
-            <h1 id='empty-cart' >Your cart is empty</h1>
-          )}
         </div>
       );
       

@@ -81,7 +81,7 @@ h1{
 
 /*CART MODAL ============================================*/
 #curtain-modal {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 9999;
     position: fixed;
     height: 100%;
@@ -95,6 +95,7 @@ h1{
 
 #cart {
     height: fit-content;
+    /* min-height: 450px; */
     width: 880px;
     border: none;
     position: relative;
@@ -102,6 +103,7 @@ h1{
     flex-direction: column;
     background-color: #eff2fb;
     overflow: auto;
+    margin-top: 40px;
 }
 
 #cart-header {
@@ -131,6 +133,7 @@ h1{
     text-align: center;
     justify-content: center;
     height: fit-content;
+    min-height: 57px;
 }
 #holder-h1 {
     color: #494f5c;
@@ -170,10 +173,11 @@ h1{
     align-items: center;
     background-color: #e6e9ef;
     height: 70%;
+    min-height: 110px;
 }
 #purchase-btn {
     background-color: #009de6;
-    margin-top: 30px;
+    margin-top: 50px;
     height: 50px;
     width: 90%;
     border: none;
@@ -192,6 +196,11 @@ h1{
 .cart-p {
     font-size: 15px;
     margin-top: 10px;
+}
+
+#purchase-div > h1 {
+    font-size: 17px;
+    color: #444542;
 }
 
 #purchase-top {
@@ -259,7 +268,7 @@ h1{
 }
 
 #cart-footer > button {
-    margin-top: 10px;
+    margin-top: 30px;
     height: 50px;
     width: 90%;
     border-radius: 3px;
