@@ -54,11 +54,21 @@
     border-radius: 3px;
     height: 70%;
     width: 54%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#search-signUp > input::placeholder {
     color: #D0D3D9ff;
 }
 #search-signUp > h3 {
     font-size: 15px;
     color: #D0D3D9ff;
+    transition: .5s;
+    cursor: pointer;
+}
+#search-signUp > h3:hover {
+    color: white;
 }
 /*=========================*/
 .charity-nav {
@@ -91,18 +101,13 @@
     align-items: center;
     justify-content: space-evenly;
 }
-#charity-cart {
+
+.nav-icons {
     color: #D0D3D9ff;
-    cursor: pointer;
     font-size: 20px;
+    transition: .5s;
+    cursor: pointer;
 }
-#fave-btn {
-    color: #D0D3D9ff;
-    cursor: pointer;
-    font-size: 20px;
-}
-#wallet-btn {
-    color: #D0D3D9ff;
-    cursor: pointer;
-    font-size: 20px;
+.nav-icons:hover {
+    color: white;
 }

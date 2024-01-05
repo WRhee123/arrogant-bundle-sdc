@@ -40,9 +40,9 @@ const Navbar = () => {
                     <h3>Earn Wallet Credit</h3>
                 </div>
                 <div id='wallet-cart'>
-                    <IoMdWallet id='wallet-btn' />
-                    <FaStar id='fave-btn'/>
-                    <FaShoppingCart id='charity-cart' onClick={handleCartDisplay} />
+                    <IoMdWallet className='nav-icons' />
+                    <FaStar className='nav-icons'/>
+                    <FaShoppingCart className='nav-icons' onClick={handleCartDisplay} />
                 </div>
             </div>
         </div>
