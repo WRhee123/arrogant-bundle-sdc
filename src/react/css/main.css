@@ -1,4 +1,4 @@
-:root{
+:root {
     /* CSS HEX Humble Pallette
     - use via: cssProperty: var(--jet)
     */
@@ -18,7 +18,7 @@
     font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1{
+h1 {
     color: lightgray;
 }
 
@@ -35,39 +35,40 @@ h1{
     background-color: var(--raisin-black);
 }
 
-.app-content{
+.app-content {
     /* width:80%; */
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
 
 /* for dev purposes to display flex areas */
-.ctn{
+.ctn {
     border: 1px solid rgb(116, 114, 114);
     /* width:100%; */
 }
 
-.nav{
-    position:sticky;
+.nav {
+    position: sticky;
     background-color: var(--onyx);
     color: white;
-    z-index:300;
-    top:0;
+    z-index: 300;
+    top: 0;
 }
 
-.nav-links{
-    height:60px;
-    z-index:200;
+.nav-links {
+    height: 60px;
+    z-index: 200;
 }
-.nav hr{
+
+.nav hr {
     background-color: var(--raisin-black);
-    height:1px;
+    height: 1px;
 
 }
 
-.charity-nav{
-    height:50px;
+.charity-nav {
+    height: 50px;
 }
 
 #banner {
@@ -87,57 +88,282 @@ h1{
     text-decoration: none;
 }
 
-
-/* -------------------------- PRODUCT DETAILS SECTION */
-.product-details{
-    color: var(--french-gray)
+.hero {
+    background-color: var(--raisin-black);
+    color: white;
+    height: 681px;
 }
-.product-details-content{
+
+.hero-content {
     max-width: 1140px;
     margin: 0 auto;
 }
 
-.product-description{
-    display:flex;
+.product-hero {
+    margin: 2rem auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+/* -------------------------- PRODUCT DETAILS SECTION */
+.product-details {
+    color: var(--french-gray)
+}
+
+.product-details-content {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.product-description {
+    display: flex;
     flex-flow: column nowrap;
     background-color: var(--french-gray);
 }
 
-.product-description-content{
+.product-description-content {
     max-width: 1140px;
     margin: 0 auto;
 }
 
-.product-description p{
+.product-description p {
     margin-bottom: 1rem;
 }
 
-.critical-reception{
+.critical-reception {
     max-width: 1140px;
     margin: 0 auto;
+    background-color: rgb(27, 30, 27);
+    box-sizing: border-box;
+    color: rgb(73, 79, 92);
+    display: block;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    height: 486px;
+    line-height: 21.6px;
+    max-height: 1000000px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 35px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 35px;
+    width: 1754px;
+    -webkit-font-smoothing: antialiased;
 }
 
-.popular-carousel{
+.critical-reception-heading {
+    box-sizing: border-box;
+    color: rgb(161, 167, 178);
+    display: block;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: 21px;
+    line-height: 21.6px;
+    margin-block-end: 10px;
+    margin-block-start: 0px;
+    margin-bottom: 10px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-top: 0px;
+    max-height: 1000000px;
+    text-transform: uppercase;
+    white-space: normal;
+    width: 1140px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.critical-reception-comment-container {
+    display: flex;
+}
+
+.critical-reception-stars-container {
+    display: flex;
+}
+
+.critical-reception-author-company-container {
+    display: flex;
+}
+
+.critical-reception-comment {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    height: auto;
+    line-height: 21.6px;
+    max-height: 1000000px;
+    text-align: left;
+    width: 33%;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+}
+
+.critical-reception-stars {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    height: 24px;
+    line-height: 24.299999px;
+    max-height: 1000000px;
+    text-align: center;
+    width: 33%;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.critical-reception-writer {
+    width: 33%;
+}
+
+.critical-reception-author {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: auto;
+    display: inline;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    height: auto;
+    line-height: 21.6px;
+    max-height: 1000000px;
+    text-align: center;
+    width: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.critical-reception-company {
+    box-sizing: border-box;
+    color: rgb(161, 167, 178);
+    cursor: auto;
+    display: inline;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    height: auto;
+    line-height: 21.6px;
+    max-height: 1000000px;
+    text-align: center;
+    width: auto;
+    -webkit-font-smoothing: antialiased;
+    padding-left: 3px;
+}
+
+.critical-reception-writer {
+    text-align: center;
+}
+
+.critical-reception>p {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    height: 36px;
+    line-height: 21.6px;
+    max-height: 1000000px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 10px;
+    text-align: center;
+    width: 1140px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.critical-reception>p>a {
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: rgb(161, 167, 178);
+    cursor: auto;
+    display: inline;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    height: auto;
+    line-height: 21.6px;
+    max-height: 1000000px;
+    outline-style: none;
+    outline-width: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-line: none;
+    width: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.critical-reception>p>a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.popular-carousel {
     background-color: var(--onyx);
-    width:100%;
+    width: 100%;
 }
 
-.popCarousel-contents{
+.popCarousel-contents {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.system-req{
+.system-req {
     max-width: 1140px;
     margin: 0 auto;
+    box-sizing: border-box;
+    color: rgb(161, 167, 178);
+    display: block;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 21.6px;
+    margin-bottom: 20px;
+    max-height: 1000000px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    width: 1140px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: rgb(27, 30, 27);
+}
+
+.system-req>h2 {
+    box-sizing: border-box;
+    color: rgb(161, 167, 178);
+    display: block;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: 21px;
+    line-height: 21.6px;
+    margin-block-end: 10px;
+    margin-block-start: 0px;
+    margin-bottom: 10px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-top: 0px;
+    max-height: 1000000px;
+    text-transform: uppercase;
+    white-space: normal;
+    width: 1140px;
+    -webkit-font-smoothing: antialiased;
 }
 
 
-.footer{
+.footer {
     background-color: var(--onyx);
 }
 
-.footer-contents{
+.footer-contents {
     max-width: 93.75rem;
     margin: 0 auto;
 }
