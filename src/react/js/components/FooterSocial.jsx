@@ -1,14 +1,20 @@
+import { TiSocialFacebook } from "react-icons/ti";
+import { TiSocialTwitter } from "react-icons/ti";
+import { TiSocialInstagram } from "react-icons/ti";
+import { FaBlog } from "react-icons/fa";
+
+
+
 
 const FooterSocial = () => {
     return (
         <>
         <div className="socialcontainer">
-            <a href="https://www.facebook.com/humblebundle/"  className="links"><span className="sr-only">Facebook</span></a>
-            <a href="https://twitter.com/humble"  className="links"><span className="sr-only">Twitter</span></a>
-            <a href="https://www.instagram.com/humblebundle"  className="links"><span
-                className="sr-only">Instagram</span></a>
+            <a href="https://www.facebook.com/humblebundle/"  className="links logo"><TiSocialFacebook /></a>
+            <a href="https://twitter.com/humble"  className="links logo"><TiSocialTwitter /></a>
+            <a href="https://www.instagram.com/humblebundle"  className="links logo"><TiSocialInstagram /></a>
 
-            <a href="https://blog.humblebundle.com/"  className="links"><span className="sr-only">Blog</span></a>
+            <a href="https://blog.humblebundle.com/"  className="links logo"><FaBlog /></a>
         </div>
         </>
     )
