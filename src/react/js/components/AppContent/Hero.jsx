@@ -1,10 +1,14 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { TbStarFilled } from "react-icons/tb";
 import HeroCarousel from './HeroCarousel';
 import '../../../css/hero.css';
+import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext.mjs";
 
 const Hero = ({productData}) => {
+    const {
+        handleCartItem
+    } = useContext(ShoppingCartContext)
 
     const [currentIndex, setCurrentIndex] = useState(0); //carousel index
     const imageRef = useRef(null)
@@ -56,7 +60,7 @@ const Hero = ({productData}) => {
                                 SAVE UP TO <span className="humble-green">${(savings).toFixed(2)} </span>
                                 MORE WITH <span className="humble-gold">HUMBLE CHOICE</span>
                             </div>
-                            <div id='checkoutBtn' onClick={()=>shopClick()}><span><FaShoppingCart/> </span>CHECKOUT</div>
+                            <div id='checkoutBtn' onClick={handleCartItem}><span><FaShoppingCart/> </span>CHECKOUT</div>
                             <div id='wishListBtn' onClick={()=>wishClick()}><span><TbStarFilled/> </span>ADD TO WISHLIST</div>
                         </div>
                         

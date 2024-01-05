@@ -24,7 +24,7 @@
 #humble-links {
     display: flex;
     flex-direction: row;
-    margin-left: 5em;
+    margin-left: 14em;
     margin-top: 10px;
     justify-content: center;
     align-items: center;
@@ -43,13 +43,14 @@
     align-items: center;
     width: 700px;
     height: 100%;
+    margin-right: 10em;
 }
 #search-signUp > input {
     background-color: #282c34;
     border: none;
     border-radius: 3px;
     height: 70%;
-    width: 60%;
+    width: 54%;
     color: #D0D3D9ff;
 }
 #search-signUp > h3 {
@@ -68,7 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 5em;
+    margin-left: 12em;
 }
 #charity-links > h3 {
     font-size: 15px;
@@ -80,7 +81,7 @@
     height: 40px;
     width: 200px;
     color: black;
-    margin-right: 5em;
+    margin-right: 12em;
     display: flex;
     flex-direction: row;
     align-items: center;
