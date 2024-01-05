@@ -11,14 +11,9 @@
     justify-content: space-between;
 }
 .nav hr {
-    background-color: var(--raisin-black);
+    color: #252830ff;
     height:1px;
 
-}
-.nav-links > h3 {
-    margin-left: 30px;
-    font-size: 15px;
-    color: var(--french-gray);
 }
 
 #humble-links {
@@ -29,11 +24,19 @@
     justify-content: center;
     align-items: center;
 }
+#humble-links > h1 {
+    cursor: pointer;
+}
 #humble-links > h3 {
     margin-left: 20px;
     color: #D0D3D9ff;
     font-size: 15px;
     margin-top: -5px;
+    cursor: pointer;
+    transition: color .5s;
+}
+#humble-links > h3:hover {
+    color: white;
 }
 
 #search-signUp {
@@ -82,14 +85,24 @@
     width: 200px;
     color: black;
     margin-right: 12em;
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    border: 3px solid black;
+    justify-content: space-evenly;
 }
 #charity-cart {
-    background-color: white;
-    width: 100px;
-    text-align: center;
+    color: #D0D3D9ff;
+    cursor: pointer;
+    font-size: 20px;
+}
+#fave-btn {
+    color: #D0D3D9ff;
+    cursor: pointer;
+    font-size: 20px;
+}
+#wallet-btn {
+    color: #D0D3D9ff;
+    cursor: pointer;
+    font-size: 20px;
 }

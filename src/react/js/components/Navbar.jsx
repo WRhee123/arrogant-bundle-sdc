@@ -3,6 +3,10 @@
 import '../../css/navbar.css'
 import { useContext } from 'react'
 import ShoppingCartContext from './ShoppingCartContext/ShoppingCartContext.mjs'
+import { FaShoppingCart } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+import { IoMdWallet } from "react-icons/io";
+
 
 
 const Navbar = () => {
@@ -36,7 +40,9 @@ const Navbar = () => {
                     <h3>Earn Wallet Credit</h3>
                 </div>
                 <div id='wallet-cart'>
-                    <div id='charity-cart' onClick={handleCartDisplay} >cart</div>
+                    <IoMdWallet id='wallet-btn' />
+                    <FaStar id='fave-btn'/>
+                    <FaShoppingCart id='charity-cart' onClick={handleCartDisplay} />
                 </div>
             </div>
         </div>
