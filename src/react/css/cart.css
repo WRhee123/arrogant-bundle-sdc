@@ -1,5 +1,15 @@
-
-
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
+  ::-webkit-scrollbar:hover {
+    width: 6px;
+  }
 
 
 #curtain-modal {
@@ -26,6 +36,7 @@
     overflow: auto;
     margin-top: 40px;
 }
+
 
 #cart-header {
     border-bottom: 1px solid gray;

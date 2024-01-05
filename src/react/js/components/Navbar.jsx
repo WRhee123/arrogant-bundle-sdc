@@ -12,6 +12,7 @@ import { IoMdWallet } from "react-icons/io";
 const Navbar = () => {
 
     const {
+        cartItem,
         handleCartDisplay
     } = useContext(ShoppingCartContext)
 
@@ -20,7 +21,7 @@ const Navbar = () => {
         <div className="nav ctn">
             <div className="nav-links">
                 <div id='humble-links' >
-                    <h1>Humble</h1>
+                    <small>site logo in progress</small>
                     <h3>Bundles</h3>
                     <h3>Store</h3>
                     <h3>Choice</h3>
@@ -40,9 +41,18 @@ const Navbar = () => {
                     <h3>Earn Wallet Credit</h3>
                 </div>
                 <div id='wallet-cart'>
-                    <IoMdWallet className='nav-icons' id='wallet-icon' />
-                    <FaStar className='nav-icons' id='star-icon'/>
-                    <FaShoppingCart className='nav-icons' id='cart-icon' onClick={handleCartDisplay} />
+                    <>
+                        <IoMdWallet className='nav-icons' id='wallet-icon' />
+                        <h3>$0.00</h3>
+                    </>
+                    <>
+                        <FaStar className='nav-icons' id='star-icon'/>
+                        <h3>0</h3>
+                    </>
+                    <>
+                        <FaShoppingCart className='nav-icons' id='cart-icon' onClick={handleCartDisplay} />
+                        <h3>{cartItem}</h3>
+                    </>
                 </div>
             </div>
         </div>

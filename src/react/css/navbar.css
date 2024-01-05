@@ -106,6 +106,11 @@
     align-items: center;
     justify-content: space-evenly;
 }
+#wallet-cart > h3 {
+    color: #D0D3D9ff;
+    font-size: 15px;
+    margin-left: -10px;
+}
 
 .nav-icons {
     color: #D0D3D9ff;

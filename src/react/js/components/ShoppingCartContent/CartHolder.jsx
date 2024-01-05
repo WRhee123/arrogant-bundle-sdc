@@ -3,10 +3,10 @@
 
 import PurchaseDiv from "./PurchaseDiv";
 
-const CartHolder = () => {
+const CartHolder = ({productData, setProductData}) => {
   return (
     <div id='cart-holder' >
-      <PurchaseDiv/>
+      <PurchaseDiv productData={productData} setProductData={setProductData} />
     </div>
   )
 }

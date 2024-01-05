@@ -1,6 +1,6 @@
 import Banner from "./Banner.jsx"
 import CurtainModal from "./CurtainModal.jsx"
-import Navbar from "./NavBar.jsx"
+import Navbar from "./Navbar.jsx"
 import Hero from "./AppContent/Hero.jsx"
 import ProductDetails from "./AppContent/ProductDetails.jsx"
 import ProductDescription from "./AppContent/ProductDescription.jsx"
@@ -9,7 +9,6 @@ import PopularCarousel from "./AppContent/PopularCarousel.jsx"
 import SystemReq from "./AppContent/SystemReq.jsx"
 import Footer from "./Footer.jsx"
 import ShoppingCartContext from "./ShoppingCartContext/ShoppingCartContext.mjs"
-import ShoppingCartProvider from "./ShoppingCartContext/ShoppingCartProvider.jsx"
 
 import { useState, useEffect, useContext } from "react"
 import getProductData from "../api.js"
@@ -41,7 +40,7 @@ const App = () => {
     if (!isLoading) {
         return (
             <>
-                   {!cartDisplay ? '' : <CurtainModal />} 
+                   {!cartDisplay ? '' : <CurtainModal productData={productData} setProductData={setProductData} />} 
                     <Banner />
                     <Navbar />
                     <div className='body ctn'>

@@ -4,7 +4,13 @@ import { IoCloseCircleSharp } from "react-icons/io5";
 import { useState, useContext } from "react";
 import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext.mjs";
 
-const PurchaseTop = () => {
+const PurchaseTop = ({productData, setProductData}) => {
+
+  const {
+    title,
+    price
+  } = productData
+
   const {
     cartItem,
     setCartItem
@@ -18,8 +24,8 @@ const PurchaseTop = () => {
       return (
         <div id='purchase-top'>
               <div id='purchase-topA'>
-                <h1><IoCloseCircleSharp onClick={emptyCart}/>Super Mario RPG</h1>
-                <h1>$59.99</h1>
+                <h1><IoCloseCircleSharp onClick={emptyCart}/>{productData.title}</h1>
+                <h1>${productData.price}</h1>
               </div>
               <div id='purchase-topB'>
                 <p>

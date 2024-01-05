@@ -6,11 +6,11 @@ import CartCheckout from "./CartCheckout"
 import CartTerms from "./CartTerms"
 import CartFooter from "./CartFooter"
 
-const ShoppingCart = () => {
+const ShoppingCart = ({productData, setProductData}) => {
   return (
     <div id='cart' >
       <CartHeader/>
-      <CartHolder/>
+      <CartHolder productData={productData} setProductData={setProductData} />
       <CartCheckout/>
       <CartTerms/>
       <CartFooter/>

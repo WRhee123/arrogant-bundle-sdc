@@ -6,7 +6,7 @@ import PurchaseBottom from "./PurchaseBottom"
 import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext.mjs"
 import { useContext } from "react"
 
-const PurchaseDiv = () => {
+const PurchaseDiv = ({productData, setProductData}) => {
   const {
     cartItem
   } = useContext(ShoppingCartContext)
@@ -15,8 +15,8 @@ const PurchaseDiv = () => {
     <div id='purchase-div' >
       {cartItem ? (
         <>
-      <PurchaseTop/>
-      <PurchaseMid/>
+      <PurchaseTop productData={productData} setProductData={setProductData}  />
+      <PurchaseMid productData={productData} setProductData={setProductData}  />
       <PurchaseBottom/> </> ) : (<h1>Your cart is empty</h1>)
 }
     </div>

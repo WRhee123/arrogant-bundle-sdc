@@ -1,14 +1,14 @@
+
+
 import '../../css/cart.css';
-
 import ShoppingCart from "./ShoppingCartContent/ShoppingCart"
-import ShoppingCartContext from './ShoppingCartContext/ShoppingCartContext.mjs';
-import { useContext } from 'react';
 
-const CurtainModal = () => {
+const CurtainModal = ({productData, setProductData}) => {
+
 
   return (
     <div id ='curtain-modal'>
-        <ShoppingCart/>
+        <ShoppingCart productData={productData} setProductData={setProductData} />
     </div>
   )
 }
