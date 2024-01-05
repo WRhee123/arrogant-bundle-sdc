@@ -38,7 +38,7 @@ const App = () => {
         return (
             <>
                 <ShoppingCartProvider>
-                    <CurtainModal />
+                    {/* <CurtainModal /> */}
                     <Banner />
                     <Navbar />
                     <div className='body ctn'>

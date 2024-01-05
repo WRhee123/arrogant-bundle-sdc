@@ -17,7 +17,7 @@ const CartFooter = () => {
       <button id='klarna' >Shop now. Pay over time with Klarna</button>
       <h4>$29.99 minimum payment</h4>
       <button id='amazon' >Pay with Amazon</button>
-      <button id='aliplay' >Alipay</button>
+      <button id='alipay' >Alipay</button>
       </>) : '' } 
     </div>
   )

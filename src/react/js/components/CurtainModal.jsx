@@ -1,4 +1,4 @@
-
+import '../../css/cart.css';
 
 import ShoppingCart from "./ShoppingCartContent/ShoppingCart"
 
