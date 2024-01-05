@@ -7,7 +7,9 @@ import ShoppingCartContext from './ShoppingCartContext/ShoppingCartContext.mjs'
 
 const Navbar = () => {
 
-    
+    const {
+        handleCartDisplay
+    } = useContext(ShoppingCartContext)
 
     return (
     <>
@@ -34,7 +36,7 @@ const Navbar = () => {
                     <h3>Earn Wallet Credit</h3>
                 </div>
                 <div id='wallet-cart'>
-                    <div id='charity-cart' >cart</div>
+                    <div id='charity-cart' onClick={handleCartDisplay} >cart</div>
                 </div>
             </div>
         </div>

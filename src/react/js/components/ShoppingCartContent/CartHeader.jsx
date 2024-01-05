@@ -8,13 +8,13 @@ import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext.mjs"
 const CartHeader = () => {
 
 const {
-  handleCartItem
+  handleCartDisplay
 } = useContext(ShoppingCartContext)
 
   return (
     <div id='cart-header' >
       <h1 id='cart-h1' > <IoCartOutline /> Shopping Cart</h1>
-      <IoCloseCircleSharp onClick={handleCartItem} id='close-circle' />
+      <IoCloseCircleSharp onClick={handleCartDisplay} id='close-circle' />
     </div>
   )
 }
