@@ -1,6 +1,5 @@
 import '../../../css/popularcarousel.css';
-import { FaRegStar } from "react-icons/fa";
-import { FaStar } from "react-icons/fa";
+import { FaRegStar, FaStar, FaChevronRight, FaChevronLeft} from "react-icons/fa";
 
 
 
@@ -23,7 +22,7 @@ const PopularCarousel = ({productData}) => {
                 <h4 className='popular-title'>Popular Games Today</h4>
                 {/* <div className="nav-button prev" onClick={prevImage}>{<FaChevronLeft/>}</div>
                     <div className="nav-button next" onClick={nextImage}>{<FaChevronRight/>}</div> */}
-                    
+
                 <div className="pop-carousel ctn">
                     
                     <div className="carouselCard ctn">

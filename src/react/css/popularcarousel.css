@@ -29,7 +29,7 @@
 /* -------------------------------- POPULAR CAROUSEL CARDS */
 
 .carouselCard{
-    width: 280px;
+    width: 275px;
     height: 275px;
     display:flex;
     flex-flow:column;
@@ -55,14 +55,15 @@
     background-color: #fff;
     font-weight: bolder;
     padding: .5rem .8rem;
-    
+    text-transform: uppercase;
 }
 
 .card-title{
-    font-size:1.1rem;
+    font-size:.9rem;
     margin-right: .2rem;
     width:175px;
     text-wrap: wrap;
+    font-weight: 800;
 }
 
 .starholder{
