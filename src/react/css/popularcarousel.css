@@ -23,6 +23,11 @@
     flex-flow: row nowrap;
     gap: 1.3rem;
     overflow-x:hidden;
+    transition: transform 0.5s ease;
+}
+
+.pop-nav.btn{
+    font-size:3rem;
 }
 
 

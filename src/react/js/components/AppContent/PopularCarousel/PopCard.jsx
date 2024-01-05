@@ -3,7 +3,7 @@ import '../../../../css/popularcarousel.css';
 import { useRef } from 'react'
 import { FaRegStar, FaStar} from "react-icons/fa";
 
-const PopCard = ({popGames}) => {
+const PopCard = ({popGames, cardRef}) => {
 
     const priceRef = useRef(null)
 
@@ -12,7 +12,8 @@ const PopCard = ({popGames}) => {
     }
 
     return (
-        <div className="carouselCard">
+        <div className="carouselCard"
+            ref={cardRef}>
             <a target='_blank' rel="noopener noreferrer" href={`${popGames[0].link}`}>
                 <img 
                     src={`https://arrogant-bundle.onrender.com${popGames[0].thumbnail_link}`} 
