@@ -1,7 +1,8 @@
 const SystemReq = ({ systemRequirements }) => {
 
     return (
-        <div className="system-req" dangerouslySetInnerHTML={{ __html: htmlDecode(systemRequirements) }}>
+        <div className="system-req-background">
+            <div className="system-req" dangerouslySetInnerHTML={{ __html: htmlDecode(systemRequirements) }}></div>
         </div>
     )
 }
