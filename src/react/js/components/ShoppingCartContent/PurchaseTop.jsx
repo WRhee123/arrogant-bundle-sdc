@@ -6,13 +6,19 @@ import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext.mjs"
 
 const PurchaseTop = () => {
   const {
-    handleCartItem
+    cartItem,
+    setCartItem
   } = useContext(ShoppingCartContext)
+
+  const emptyCart = () => {
+    setCartItem(cartItem - 1)
+    console.log('Cart emptied')
+  }
 
       return (
         <div id='purchase-top'>
               <div id='purchase-topA'>
-                <h1><IoCloseCircleSharp onClick={handleCartItem}/>Super Mario RPG</h1>
+                <h1><IoCloseCircleSharp onClick={emptyCart}/>Super Mario RPG</h1>
                 <h1>$59.99</h1>
               </div>
               <div id='purchase-topB'>

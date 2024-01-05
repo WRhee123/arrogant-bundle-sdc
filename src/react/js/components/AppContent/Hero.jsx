@@ -8,13 +8,9 @@ import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext.mjs"
 const Hero = ({productData}) => {
     const {
         cartItem,
-        setCartItem
+        handleCartItem
     } = useContext(ShoppingCartContext)
 
-    const addToCart = () => {
-        setCartItem(true)
-        console.log('addToCart is working')
-    }
 
     const [currentIndex, setCurrentIndex] = useState(0); //carousel index
     const imageRef = useRef(null)
@@ -66,7 +62,7 @@ const Hero = ({productData}) => {
                                 SAVE UP TO <span className="humble-green">${(savings).toFixed(2)} </span>
                                 MORE WITH <span className="humble-gold">HUMBLE CHOICE</span>
                             </div>
-                            <div id='checkoutBtn' onClick={addToCart}><span><FaShoppingCart/> </span>{cartItem ? 'CHECKOUT' : 'ADD TO CART'} </div>
+                            <div id='checkoutBtn' onClick={handleCartItem}><span><FaShoppingCart/> </span>{cartItem > 0 ? 'CHECKOUT' : 'ADD TO CART'} </div>
                             <div id='wishListBtn' onClick={()=>wishClick()}><span><TbStarFilled/> </span>ADD TO WISHLIST</div>
                         </div>
                         

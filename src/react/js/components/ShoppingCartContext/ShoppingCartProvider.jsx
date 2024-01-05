@@ -6,18 +6,23 @@ import { useState } from "react"
 const ShoppingCartProvider = ({children}) => {
 
   //state to see if the cart contains an item
-  const [cartItem, setCartItem] = useState(false)
+  const [cartItem, setCartItem] = useState(0)
   const [cartDisplay, setCartDisplay] = useState(false)
 
   //function to handle conditional rendering if the cart contains an item
   const handleCartItem = () => {
-    setCartItem(!cartItem)
-    console.log(cartItem)
+    if(cartItem === 1) {
+      console.log('Item already in cart')
+      return;
+    }
+
+    setCartItem(cartItem + 1)
+    console.log('Item added to cart')
   }
 
   const handleCartDisplay = () => {
     setCartDisplay(!cartDisplay)
-    console.log('working')
+    !cartDisplay ? console.log('Displaying Cart') : console.log('Cart Closed');
   }
 
 

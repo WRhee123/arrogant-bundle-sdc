@@ -10,8 +10,8 @@ const CartFooter = () => {
 
   return (
     <div id='cart-footer' >
-      <button id='purchase-btn' >{cartItem ? 'Pay with card' : 'Purchase' }</button>
-      {cartItem ? (
+      <button id='purchase-btn' >{cartItem > 0 ? 'Pay with card' : 'Purchase' }</button>
+      {cartItem > 0 ? (
       <>
       <button id='paypal' >Pay with PayPal</button>
       <button id='klarna' >Shop now. Pay over time with Klarna</button>
