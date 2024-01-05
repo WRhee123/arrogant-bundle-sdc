@@ -7,6 +7,7 @@ import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext.mjs"
 
 const Hero = ({productData}) => {
     const {
+        cartItem,
         setCartItem
     } = useContext(ShoppingCartContext)
 
@@ -65,7 +66,7 @@ const Hero = ({productData}) => {
                                 SAVE UP TO <span className="humble-green">${(savings).toFixed(2)} </span>
                                 MORE WITH <span className="humble-gold">HUMBLE CHOICE</span>
                             </div>
-                            <div id='checkoutBtn' onClick={addToCart}><span><FaShoppingCart/> </span>ADD TO CART</div>
+                            <div id='checkoutBtn' onClick={addToCart}><span><FaShoppingCart/> </span>{cartItem ? 'CHECKOUT' : 'ADD TO CART'} </div>
                             <div id='wishListBtn' onClick={()=>wishClick()}><span><TbStarFilled/> </span>ADD TO WISHLIST</div>
                         </div>
                         
