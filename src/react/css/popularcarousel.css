@@ -1,0 +1,104 @@
+/* ------------------------------ POPULAR CAROUSEL  */
+.pop-carousel-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    flex-flow: row wrap;
+}
+
+
+.popular-title{
+    font-size:.9rem;
+    color:var(--french-gray);
+    text-transform: uppercase;
+    width:100%;
+    font-weight:bold;
+    white-space: normal;
+}
+
+.pop-carousel{
+    width: 100%;
+    margin: 1rem 0;
+    display:flex;
+    flex-flow: row nowrap;
+    gap: 1.3rem;
+    overflow-x:hidden;
+}
+
+
+/* -------------------------------- POPULAR CAROUSEL CARDS */
+
+.carouselCard{
+    width: 280px;
+    height: 275px;
+    display:flex;
+    flex-flow:column;
+}
+
+.carouselCard a{
+    display:flex;
+    flex-flow:column;
+    text-decoration: none;
+
+}
+
+.card-img{
+    object-fit: contain;
+}
+
+.title-box{
+    height:3.5rem;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    color: var(--darkTitle);
+    background-color: #fff;
+    font-weight: bolder;
+    padding: .5rem .8rem;
+    
+}
+
+.card-title{
+    font-size:1.1rem;
+    margin-right: .2rem;
+    width:175px;
+    text-wrap: wrap;
+}
+
+.starholder{
+    width:1.1rem;
+    font-size:1.1rem;
+    position:relative
+}
+.star{
+    position:absolute;
+    top:0;
+    left:0;
+}
+.starOne{
+    color:gray;
+}
+.starOne:hover{
+    /* display:none; */
+}
+
+.starTwo {
+    color: var(--french-gray);
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.starTwo:hover {
+    color: var(--gold);
+    opacity: 1; 
+    z-index:100;
+}
+
+.carouselCard hr{
+}
+
+.card-footer{
+    min-height: 50px;
+    border-top:  1px solid #eee;
+    background-color: var(--offgray);
+}

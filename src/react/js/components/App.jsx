@@ -41,7 +41,7 @@ const App = () => {
                         <ProductDetails />
                         <ProductDescription />
                         <CriticalReception criticalReceptions={productData.critical_receptions} />
-                        <PopularCarousel />
+                        <PopularCarousel productData={productData}/>
                         <SystemReq systemRequirements={productData.system_requirements} />
                     </div> {/* end app-content ctn */}
                 </div> {/* end body ctn */}

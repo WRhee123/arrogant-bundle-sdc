@@ -7,8 +7,11 @@
     --eerie-black: #191B19ff;
     --jet: #2A2B29ff;
     --french-gray: #D0D3D9ff;
+    --offgray: #f9f9f9;
     --onyx: #363942ff;
     --gold: #ef9943;
+    --darkTitle: #494f5c;
+
 }
 
 * {
@@ -117,15 +120,12 @@ h1{
     margin: 0 auto;
 }
 
-.popular-carousel{
+.pop-carousel-section{
     background-color: var(--onyx);
     width:100%;
+    padding: 35px 0;
 }
 
-.popCarousel-contents{
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 .system-req{
     max-width: 1140px;
