@@ -11,7 +11,7 @@ const Footer = () => {
         <>
         <div className='footer'>
             <div className="max-width-wrapper">
-            <div className="footer-contents">
+            <div className="footer-content">
                 <div className="brand">
                 <a>
                     <img src="https://cdn.humblebundle.com/static/hashed/4814f84495cd679571cb94896978da3825562075.svg" alt="Humble Bundle Logo" />

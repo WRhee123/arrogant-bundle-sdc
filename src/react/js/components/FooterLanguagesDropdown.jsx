@@ -1,36 +1,25 @@
 
-const FooterLanguagesDropdown = () => {
-
+const FooterLanguagesDropdown = ( {changeLanguage} ) => {
+    const handleClick = (e) => {
+        if(e.target.id) {
+            changeLanguage(e.target.id);
+        }
+    }
     return (
         <>
         <div className="language-container">
-            <ul className="language-list">
+            
+            <button id="Français" className="js-change-language" onClick={handleClick}>Français</button>
 
-            <li className="">
-            <button data-locale="fr" className="js-change-language">Français</button>
-            </li>
+            <button id="English" data-locale="en" className="js-change-language" onClick={handleClick}>English</button>
+            
+            <button id="简体中文" data-locale="zh_CN" className="js-change-language" onClick={handleClick}>简体中文</button>
 
-            <li className=" active ">
-            <button data-locale="en" className="js-change-language">English</button>
-            </li>
+            <button id="Deutsch" data-locale="de" className="js-change-language" onClick={handleClick}>Deutsch</button>
 
-            <li className="">
-            <button data-locale="zh_CN" className="js-change-language">简体中文</button>
-            </li>
+            <button id="Italiano" data-locale="it" className="js-change-language" onClick={handleClick}>Italiano</button>
 
-            <li className="">
-            <button data-locale="de" className="js-change-language">Deutsch</button>
-            </li>
-
-            <li className="">
-            <button data-locale="it" className="js-change-language">Italiano</button>
-            </li>
-
-            <li className="">
-            <button data-locale="es" className="js-change-language">Español</button>
-            </li>
-
-            </ul>
+            <button id="Español" data-locale="es" className="js-change-language" onClick={handleClick}>Español</button>
         </div>
         </>
     )
