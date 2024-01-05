@@ -169,9 +169,8 @@
 /* ------------------------- TOOLTIP SECTION */
 
 #discount-tip{
-    font-weight: 900;
-    font-size:.95rem;
-    padding:.25rem .9rem;
+    font-weight: 800;
+    padding:.4rem 1rem;
     border-radius: .3rem;
     display:flex;
     flex-flow:column nowrap;
@@ -179,11 +178,44 @@
     margin: 0px;
     box-sizing: border-box;
     opacity:1;
+    width: 192px;
+    height:auto;
+    font-size:.72rem;
 }
 
 .tip-header{
+    display:flex;
+    text-transform: uppercase;
     color:var(--offwhite);
     background-color: var(--onyx);
-    padding:.5rem;
+    padding:.6rem .8rem;
+    margin: auto;
+    width:100%;
+    justify-content: center;
+}
 
+.tip-content{
+    display:flex;
+    flex-flow:row wrap;
+    padding:.6rem .8rem;
+    /* gap:.5rem; */
+    justify-content: left;
+    color:lightgray;
+}
+.store-discount-percent{
+    width:100%;
+}
+
+.deal{
+    color: var(--apple-green)
+}
+
+.store-discount-amount{
+    display: flex;
+    gap:.3rem;
+}
+
+.old-price{
+    text-decoration: line-through;
+    color:gray;
 }
