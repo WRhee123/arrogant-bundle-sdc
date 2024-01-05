@@ -22,16 +22,16 @@ h1 {
     color: lightgray;
 }
 
-.humble-gold{
+.humble-gold {
     color: var(--gold);
 }
 
-.humble-green{
-    color:var(--apple-green);
+.humble-green {
+    color: var(--apple-green);
 }
 
-.body{
-    width:100%;
+.body {
+    width: 100%;
     background-color: var(--raisin-black);
 }
 
@@ -131,10 +131,13 @@ h1 {
     margin-bottom: 1rem;
 }
 
+.critical-reception-background {
+    background-color: rgb(27, 30, 27);
+}
+
 .critical-reception {
     max-width: 1140px;
     margin: 0 auto;
-    background-color: rgb(27, 30, 27);
     box-sizing: border-box;
     color: rgb(73, 79, 92);
     display: block;
@@ -314,6 +317,10 @@ h1 {
     margin: 0 auto;
 }
 
+.system-req-background {
+    background-color: rgb(27, 30, 27);
+}
+
 .system-req {
     max-width: 1140px;
     margin: 0 auto;
@@ -333,7 +340,6 @@ h1 {
     font-weight: bold;
     padding-top: 35px;
     padding-bottom: 35px;
-    background-color: rgb(27, 30, 27);
 }
 
 .system-req>h2 {
