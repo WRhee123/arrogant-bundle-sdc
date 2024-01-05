@@ -47,7 +47,7 @@
 }
 
 .title-box{
-    height:3.5rem;
+    height:4rem;
     display:flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -77,10 +77,7 @@
     left:0;
 }
 .starOne{
-    color:gray;
-}
-.starOne:hover{
-    /* display:none; */
+    color: var(--offgray);
 }
 
 .starTwo {
@@ -95,11 +92,25 @@
     z-index:100;
 }
 
-.carouselCard hr{
-}
 
 .card-footer{
+    display:flex;
+    flex-flow: row nowrap;
+    height: 100%;
     min-height: 50px;
     border-top:  1px solid #eee;
-    background-color: var(--offgray);
+    background-color: var(--offwhite);
+}
+
+.card-systems-box{
+    width:auto;
+    display:flex;
+    flex-flow: row nowrap;
+    padding:1rem;
+    gap:.2rem;
+}
+
+.verticalborder{
+    border-right: 1.8px solid rgba(81, 81, 81, 0.496);
+    height:17px
 }
