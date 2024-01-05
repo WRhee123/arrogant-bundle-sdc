@@ -1,5 +1,7 @@
 import '../../../css/popularcarousel.css';
 import { FaRegStar, FaStar, FaChevronRight, FaChevronLeft} from "react-icons/fa";
+import { useRef } from 'react'
+import { Tooltip } from 'react-tooltip';
 
 
 
@@ -12,10 +14,13 @@ const PopularCarousel = ({productData}) => {
         genre,
     } = productData
 
+    const priceRef = useRef(null)
+
     const starClick = (e) => {
         console.log('starclicked')
     }
 
+    console.log(priceRef.current)
 
     return (
     <>
@@ -46,10 +51,9 @@ const PopularCarousel = ({productData}) => {
                                 </a>
                             </div>
                         </a>
+
                         <div className="card-footer">
-                            
                             <div className="card-systems-box">
-                                {/* TODO issue here, platforms not showing up */}
                                 <div className="card-system-platforms">
                                     {popGames[0].platform_images.map((image, index) => (
                                         <img src={`https://arrogant-bundle.onrender.com${image}`} 
@@ -70,10 +74,16 @@ const PopularCarousel = ({productData}) => {
                                 
                             </div>
                             
-                            <div className="card-discounts">
-                                {/* if deal */}
+                            <div className="card-price-ctn">
+                                <div className='pop-discount' 
+                                ref={priceRef}
+                                data-tooltip-id="discount-tip"
+                                >
+                                    <p>-{popGames[4].deal}%</p>
+                                    
+                                </div>
+                                <div className="pop-price">${popGames[4].deal_price}</div>
                             </div>
-                            <div className="card-price"></div>
                         </div>
 
 
@@ -85,6 +95,25 @@ const PopularCarousel = ({productData}) => {
             </div>
 
         </div>
+
+        <Tooltip id="discount-tip" place="top" >
+            <div className="tip-header">
+                DISCOUNT BREAKDOWN
+            </div>
+            <div className="tip-content">
+                <div className="store-dscount-percent">
+                    <span className='deal'>-${popGames[4].deal}%</span>
+                    STORE DISCOUNT 
+                </div>
+                <div className="store-discount-amount">
+                    <span className='old-price'>${popGames[4].price}</span>
+                    <img src="https://cdn.humblebundle.com/static/hashed/14ba8ecd2fd68f1d77c8c41f0d0f48486c30da74.svg" alt="hb arrow"/>
+                    {popGames[4].deal_price}
+                </div>
+                
+                
+            </div>
+        </Tooltip>
     </>
 
     )
