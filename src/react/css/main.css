@@ -180,6 +180,7 @@ h1 {
 
 .critical-reception-comment-container {
     display: flex;
+    justify-content: space-between;
 }
 
 .critical-reception-stars-container {
@@ -188,6 +189,7 @@ h1 {
 
 .critical-reception-author-company-container {
     display: flex;
+    padding-bottom: 10px;
 }
 
 .critical-reception-comment {
@@ -202,7 +204,9 @@ h1 {
     text-align: left;
     width: 33%;
     -webkit-font-smoothing: antialiased;
-    text-align: center;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .critical-reception-stars {
