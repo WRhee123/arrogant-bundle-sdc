@@ -7,13 +7,12 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { IoMdWallet } from "react-icons/io";
 
-
-
 const Navbar = () => {
 
     const {
         cartItem,
-        handleCartDisplay
+        handleCartDisplay,
+        wishlistCount
     } = useContext(ShoppingCartContext)
 
     return (
@@ -21,24 +20,29 @@ const Navbar = () => {
         <div className="nav ctn">
             <div className="nav-links">
                 <div id='humble-links' >
-                    <small>site logo in progress</small>
-                    <h3>Bundles</h3>
-                    <h3>Store</h3>
-                    <h3>Choice</h3>
+                    <h1>ARROGANT BUNDLE</h1>
+                        <a href='https://www.humblebundle.com/bundles?_gl=1*1r5aa4r*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' >Bundles</a>
+
+                        <a href='https://www.humblebundle.com/store?_gl=1*9go6x7*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' >Store</a>
+
+                        <a href='https://www.humblebundle.com/membership?_gl=1*1anwn3y*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' >Choice</a>
+
                     <h3>About</h3>
                 </div>
 
                 <div id='search-signUp' >
                     <input type="search" placeholder='Search'/>
-                    <h3>Sign Up</h3>
-                    <h3>Log In</h3>
+                        <a href='https://www.humblebundle.com/signup?hmb_source=navbar&goto=%2Fstore%2Fsuper-mario-rpg-switch&qs=hmb_source%3Dsearch_bar%26_gl%3D1*1gtdzz5*_up*MQ..%26gclid%3DCj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank'>Sign Up</a>
+
+                        <a href='https://www.humblebundle.com/login?hmb_source=navbar&goto=%2Fstore%2Fsuper-mario-rpg-switch&qs=hmb_source%3Dsearch_bar%26_gl%3D1*1gtdzz5*_up*MQ..%26gclid%3DCj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank'>Log In</a>
                 </div>
             </div>
             <hr/>
             <div className="charity-nav">
                 <div id='charity-links' >
-                    <h3>Choose Charity</h3>
-                    <h3>Earn Wallet Credit</h3>
+                    <a>Choose Charity</a>
+
+                    <a href='https://www.humblebundle.com/refer?hmb_source=store_navbar&_gl=1*lnfe7u*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank'>Earn Wallet Credit</a>
                 </div>
                 <div id='wallet-cart'>
                     <>
@@ -47,7 +51,7 @@ const Navbar = () => {
                     </>
                     <>
                         <FaStar className='nav-icons' id='star-icon'/>
-                        <h3>0</h3>
+                        <h3>{wishlistCount}</h3>
                     </>
                     <>
                         <FaShoppingCart className='nav-icons' id='cart-icon' onClick={handleCartDisplay} />

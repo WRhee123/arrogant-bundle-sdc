@@ -8,9 +8,10 @@ import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext.mjs"
 const Hero = ({productData}) => {
     const {
         cartItem,
-        handleCartItem
-    } = useContext(ShoppingCartContext)
-
+        handleCartItem,
+        addTo,
+        wishlistCount
+    } = useContext(ShoppingCartContext);
 
     const [currentIndex, setCurrentIndex] = useState(0); //carousel index
     const imageRef = useRef(null)
@@ -63,7 +64,7 @@ const Hero = ({productData}) => {
                                 MORE WITH <span className="humble-gold">HUMBLE CHOICE</span>
                             </div>
                             <div id='checkoutBtn' onClick={handleCartItem}><span><FaShoppingCart/> </span>{cartItem > 0 ? 'CHECKOUT' : 'ADD TO CART'} </div>
-                            <div id='wishListBtn' onClick={()=>wishClick()}><span><TbStarFilled/> </span>ADD TO WISHLIST</div>
+                            <div id='wishListBtn' onClick={addTo}><span><TbStarFilled/> </span>{wishlistCount > 0 ? 'ON WISHLIST' : 'ADD TO WISHLIST'}</div>
                         </div>
                         
                     </div>

@@ -24,7 +24,7 @@ const PurchaseTop = ({productData, setProductData}) => {
       return (
         <div id='purchase-top'>
               <div id='purchase-topA'>
-                <h1><IoCloseCircleSharp onClick={emptyCart}/>{productData.title}</h1>
+                <h1><IoCloseCircleSharp id='h1-x' onClick={emptyCart}/>{productData.title}</h1>
                 <h1>${productData.price}</h1>
               </div>
               <div id='purchase-topB'>

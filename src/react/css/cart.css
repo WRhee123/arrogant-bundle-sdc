@@ -1,15 +1,4 @@
-::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: transparent;
-    border: none;
-  }
-  
-  ::-webkit-scrollbar:hover {
-    width: 6px;
-  }
+
 
 
 #curtain-modal {
@@ -47,6 +36,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+#cart-outline {
+    font-size: 25px;
+    margin-right: 3px;
 }
 #cart-h1 {
     font-size: 24px;
@@ -133,6 +126,10 @@
 #purchase-topA > h1 {
     color: #494f5c;
 }
+#h1-x {
+    opacity: .4;
+}
+
 #purchase-topB {
     font-size: 16px;
     display: flex;

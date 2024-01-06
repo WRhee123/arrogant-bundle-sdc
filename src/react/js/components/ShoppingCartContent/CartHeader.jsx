@@ -13,7 +13,8 @@ const {
 
   return (
     <div id='cart-header' >
-      <h1 id='cart-h1' > <IoCartOutline /> Shopping Cart</h1>
+      <IoCartOutline id='cart-outline' />
+      <h1 id='cart-h1' >Shopping Cart</h1>
       <IoCloseCircleSharp onClick={handleCartDisplay} id='close-circle' />
     </div>
   )
