@@ -159,6 +159,23 @@
     margin-left: 2em;
     margin-right: 2em;
 }
+#price-frag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    margin-right: 1.8em;
+}
+#price-frag > h1 {
+    font-size: 15px;
+}
+#before-price {
+    text-decoration: line-through;
+    color: #494f5c;
+}
+#taxes-price {
+    color: red;
+}
 
 #purchase-bottom {
     background-image: url('https://cdn.humblebundle.com/static/hashed/bc89c6dc0aa0523334a5c50035a45a67aa543f40.jpg');

@@ -9,7 +9,6 @@ import PopularCarousel from "./AppContent/PopularCarousel.jsx"
 import SystemReq from "./AppContent/SystemReq.jsx"
 import Footer from "./Footer.jsx"
 import ShoppingCartContext from "./ShoppingCartContext/ShoppingCartContext.mjs"
-
 import { useState, useEffect, useContext } from "react"
 import getProductData from "../api.js"
 

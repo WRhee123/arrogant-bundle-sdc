@@ -5,10 +5,13 @@ import { useState } from "react"
 
 const ShoppingCartProvider = ({children}) => {
 
-  //state to see if the cart contains an item
+  //state to check if the cart contains an item
   const [cartItem, setCartItem] = useState(0)
+  //state to check if the cart is displayed
   const [cartDisplay, setCartDisplay] = useState(false)
+  //state to add item to wishlist
   const [addToWishlist, setAddToWishlist] = useState(false)
+  //state to increase the number of items in wishlist
   const [wishlistCount, setWishlistCount] = useState(0)
 
   //function to handle conditional rendering if the cart contains an item
@@ -22,11 +25,13 @@ const ShoppingCartProvider = ({children}) => {
     console.log('Item added to cart')
   }
 
+  //function to handle displaying of the shopping cart
   const handleCartDisplay = () => {
     setCartDisplay(!cartDisplay)
     !cartDisplay ? console.log('Displaying Cart') : console.log('Cart Closed');
   }
 
+  //function that adds item to wishlist
   const addTo = () => {
     setAddToWishlist(true)
 
