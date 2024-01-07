@@ -6,6 +6,7 @@ import ShoppingCartContext from './ShoppingCartContext/ShoppingCartContext.mjs'
 import { FaShoppingCart } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { IoMdWallet } from "react-icons/io";
+import { FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
 
@@ -31,13 +32,16 @@ const Navbar = () => {
                 </div>
 
                 <div id='search-signUp' >
-                    <input type="search" placeholder='Search'/>
+                    <div id='searchInput'>
+                        <input type="search" placeholder='Search'/>
+                        <FaSearch />
+                    </div>
                         <a href='https://www.humblebundle.com/signup?hmb_source=navbar&goto=%2Fstore%2Fsuper-mario-rpg-switch&qs=hmb_source%3Dsearch_bar%26_gl%3D1*1gtdzz5*_up*MQ..%26gclid%3DCj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank'>Sign Up</a>
 
                         <a href='https://www.humblebundle.com/login?hmb_source=navbar&goto=%2Fstore%2Fsuper-mario-rpg-switch&qs=hmb_source%3Dsearch_bar%26_gl%3D1*1gtdzz5*_up*MQ..%26gclid%3DCj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank'>Log In</a>
                 </div>
             </div>
-            <hr/>
+            
             <div className="charity-nav">
                 <div id='charity-links' >
                     <a>Choose Charity</a>

@@ -9,17 +9,14 @@
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
-}
-.nav hr {
-    color: #252830ff;
-    height:1px;
-
+    border-bottom: 2px solid #252830ff;
+    border-top: none;
 }
 
 #humble-links {
     display: flex;
     flex-direction: row;
-    margin-left: 14em;
+    margin-left: 12em;
     margin-top: 10px;
     justify-content: center;
     align-items: center;
@@ -65,18 +62,34 @@
     height: 100%;
     margin-right: 10em;
 }
-#search-signUp > input {
+#searchInput {
     background-color: #282c34;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     border: none;
     border-radius: 3px;
     height: 70%;
     width: 54%;
     padding: 12px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
-}
-#search-signUp > input::placeholder {
     color: #D0D3D9ff;
+}
+#searchInput > input {
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    width: 330px;
+    color: white;
+    font-size: 17px;
+}
+#searchInput > input::placeholder {
+    color: #D0D3D9ff;
+    font-weight: bold;
+    font-size: 17px;
+    font-weight: bold;
 }
 #search-signUp > a {
     font-size: 15px;
@@ -96,6 +109,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: none;
 }
 
 #charity-links {

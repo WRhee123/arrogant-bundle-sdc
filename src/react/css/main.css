@@ -44,12 +44,6 @@ h1{
     margin: 0 auto;
 }
 
-/* for dev purposes to display flex areas */
-.ctn{
-    border: 1px solid rgb(116, 114, 114);
-    /* width:100%; */
-}
-
 .nav{
     position:sticky;
     background-color: var(--onyx);
