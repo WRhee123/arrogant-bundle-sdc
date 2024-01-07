@@ -34,12 +34,13 @@ const PopularCarousel = ({productData}) => {
     return (
     <>
         <div id='pop-carousel-section' className=' ctn'>
+            <div className="pop-nav-box">
+                <div className="pop-nav-btn pop-prev unscrollable" onClick={prevImage}>{<FaChevronLeft/>}</div>
+                <div className="pop-nav-btn pop-next" onClick={nextImage}>{<FaChevronRight/>}</div>
+            </div>
             <div className="pop-carousel-container">
                 <h4 className='popular-title'>Popular Games Today</h4>
-                <div className="pop-nav-btn prev" onClick={prevImage}>{<FaChevronLeft/>}</div>
-                <div className="pop-nav-btn next" onClick={nextImage}>{<FaChevronRight/>}</div>
-
-                <div className="pop-carousel"
+                <div className="pop-carousel-wrapper"
                     style={{ transform: `translateX(-${currentIndex * (cardWidth + gapWidth)}px)` }}>
                     <PopCard popGames={popGames} cardRef={cardRef}/>
                 </div> {/* end pop-carousel*/}

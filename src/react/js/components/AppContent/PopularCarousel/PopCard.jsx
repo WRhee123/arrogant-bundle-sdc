@@ -12,8 +12,10 @@ const PopCard = ({popGames, cardRef}) => {
     }
 
     return (
-        <div className="carouselCard"
-            ref={cardRef}>
+        popGames.map((game,index) => (
+            <div className="carouselCard"
+                ref={cardRef}
+                key={game.title+index+'pop'}>
             <a target='_blank' rel="noopener noreferrer" href={`${popGames[0].link}`}>
                 <img 
                     src={`https://arrogant-bundle.onrender.com${popGames[0].thumbnail_link}`} 
@@ -65,6 +67,8 @@ const PopCard = ({popGames, cardRef}) => {
                 </div>
             </div>
         </div> 
+        ))
+        
     )
 }
 
