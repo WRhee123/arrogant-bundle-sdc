@@ -114,6 +114,63 @@ h1 {
 .product-details-content {
     max-width: 1140px;
     margin: 0 auto;
+    display: flex;
+}
+
+.product-details-content>div>* {
+    padding: 25px;
+}
+
+.product-details-details {
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: auto;
+    display: inline;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: auto;
+    line-height: 21.6px;
+    max-height: 1000000px;
+    outline-color: rgb(255, 255, 255);
+    outline-style: none;
+    outline-width: 0px;
+    width: auto;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+
+.product-details-details:hover {
+    text-decoration: underline;
+    text-decoration-line: underline;
+}
+
+.product-details-rating {
+    display: flex;
+    gap: 1rem;
+}
+
+.product-details-rating-reason {
+    box-sizing: border-box;
+    color: rgb(161, 167, 178);
+    display: list-item;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: 19px;
+    line-height: 19.200001px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    max-height: 1000000px;
+    text-align: left;
+    width: 136.875px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.product-details-background {
+    background-color: rgb(27, 30, 27);
 }
 
 .product-description {
@@ -368,6 +425,27 @@ h1 {
     -webkit-font-smoothing: antialiased;
 }
 
+.product-details-title {
+    box-sizing: border-box;
+    color: rgb(161, 167, 178);
+    display: block;
+    font-family: "Sofia Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: 21px;
+    line-height: 21.6px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-bottom: 0px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-top: 0px;
+    max-height: 1000000px;
+    text-transform: uppercase;
+    white-space: normal;
+    width: 273.75px;
+
+}
 
 .footer {
     background-color: var(--onyx);
