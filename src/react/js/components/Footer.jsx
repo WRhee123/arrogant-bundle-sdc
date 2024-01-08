@@ -4,6 +4,7 @@ import FooterLinks from "./FooterLinks"
 import FooterRefer from "./FooterRefer"
 import FooterSocial from "./FooterSocial"
 import FooterTrending from "./FooterTrending"
+import "../../css/footer.css"
 
 const Footer = () => {
 
