@@ -26,7 +26,6 @@ const PopularCarousel = ({productData}) => {
     };
 
     
-
     const cardWidth = cardRef.current ? cardRef.current.offsetWidth : 0;
     const gapWidth = 12; 
 
@@ -46,6 +45,9 @@ const PopularCarousel = ({productData}) => {
                 </div> {/* end pop-carousel*/}
             </div> {/* end pop-carousel-container*/}
         </div> {/* end pop-carousel-section*/}
+
+
+        
 
         <Tooltip id="discount-tip" place="top" >
             <div className="tip-header">

@@ -69,7 +69,7 @@ div.pop-prev {
 
 .carouselCard{
     width: 275px;
-    height: 275px;
+    height: 230px;
     display:flex;
     flex-flow:column;
 }
@@ -177,13 +177,24 @@ div.pop-prev {
 .card-price-ctn{
     display:flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
     align-items: center;
     gap:.75rem;
-    margin: 0 auto;
+    justify-content:flex-end
 }
 
-.pop-discount{
+.pop-price{
+    /* margin-left: 2rem; */
+    font-weight: 900;
+    text-rendering: optimizeLegibility;
+    color: var(--darkTitle);
+    font-size:.95rem;
+    padding:.25rem .9rem;
+    border-radius: .3rem;
+    border: 1px solid var(--darkTitle)
+}
+
+.pop-discount-ctn{
+    margin: 0 auto;
     font-weight: 900;
     text-rendering: optimizeLegibility;
     text-shadow: 0 3px 0 rgba(0,0,0,0.2);
@@ -195,7 +206,7 @@ div.pop-prev {
     border-radius: .3rem;
 }
 
-.pop-price{
+.pop-price-deal{
     font-weight: 900;
     text-rendering: optimizeLegibility;
     color: var(--darkTitle);
