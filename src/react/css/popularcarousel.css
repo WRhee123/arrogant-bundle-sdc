@@ -40,9 +40,13 @@
     transition: color 0.5s linear; 
 }
 
-.pop-nav-btn:hover {
+.pop-nav-hover:hover{
     color: white;
 }
+
+/* .pop-nav-btn:hover {
+    color: white;
+} */
 
 .unscrollable{
     opacity:.2;

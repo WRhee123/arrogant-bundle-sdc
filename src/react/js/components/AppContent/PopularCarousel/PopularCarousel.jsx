@@ -35,13 +35,13 @@ const PopularCarousel = ({productData}) => {
 
     return (
     <>
-        <div id='pop-carousel-section' className=' ctn'>
+        <div id='pop-carousel-section' className='ctn'>
             <div className="pop-nav-box">
-                <div className={`pop-nav-btn pop-prev ${isLeftDisabled ? 'unscrollable' : ''}`}  
+                <div className={`pop-nav-btn pop-prev ${isLeftDisabled ? 'unscrollable' : 'pop-nav-hover'}`}  
                 onClick={prevImage}>
                     {<FaChevronLeft/>}
                 </div>
-                <div className={`pop-nav-btn pop-next ${isRightDisabled ? 'unscrollable' : ''}`} 
+                <div className={`pop-nav-btn pop-next ${isRightDisabled ? 'unscrollable' : 'pop-nav-hover'}`} 
                 onClick={nextImage}>
                     {<FaChevronRight/>}
                 </div>
