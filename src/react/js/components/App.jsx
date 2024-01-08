@@ -38,7 +38,7 @@ const App = () => {
                 <div className='body ctn'>
                     <div className="app-content ctn">
                         <Hero productData={productData} />
-                        <ProductDetails />
+                        <ProductDetails platforms={productData.platforms} publisher={productData.publisher} operatingSystems={productData.operating_systems} links={productData.links} rating={productData.rating} />
                         <ProductDescription />
                         <CriticalReception criticalReceptions={productData.critical_receptions} />
                         <PopularCarousel />
