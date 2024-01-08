@@ -7,33 +7,44 @@ import PopCard from './PopCard';
 // TODO conditional rendering based on genre
 const PopularCarousel = ({productData}) => {
 
-    const [currentIndex, setCurrentIndex] = useState(0); //carousel index
-    const cardRef = useRef(null);
-
     const {
         other_popular_games: popGames, 
         genre,
     } = productData
 
+    const [currentIndex, setCurrentIndex] = useState(0); //carousel index
+    const cardRef = useRef(null);
+
+    const cardWidth = cardRef.current ? cardRef.current.offsetWidth : 0;
+    const gapWidth = 12;
+    const carouselSize = 4 - 1; // carousel displays 4 cards at time
+    const isLeftDisabled = currentIndex === 0;
+    const isRightDisabled = currentIndex === popGames.length - 1 - carouselSize;
+
     const nextImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % popGames.length);
+        if(!isRightDisabled) {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % popGames.length);
+        }
     };
     
     const prevImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + popGames.length) % popGames.length);
+        if(!isLeftDisabled){
+            setCurrentIndex((prevIndex) => (prevIndex - 1 + popGames.length) % popGames.length);
+        }
     };
-
-    
-    const cardWidth = cardRef.current ? cardRef.current.offsetWidth : 0;
-    const gapWidth = 12; 
-
 
     return (
     <>
         <div id='pop-carousel-section' className=' ctn'>
             <div className="pop-nav-box">
-                <div className="pop-nav-btn pop-prev unscrollable" onClick={prevImage}>{<FaChevronLeft/>}</div>
-                <div className="pop-nav-btn pop-next" onClick={nextImage}>{<FaChevronRight/>}</div>
+                <div className={`pop-nav-btn pop-prev ${isLeftDisabled ? 'unscrollable' : ''}`}  
+                onClick={prevImage}>
+                    {<FaChevronLeft/>}
+                </div>
+                <div className={`pop-nav-btn pop-next ${isRightDisabled ? 'unscrollable' : ''}`} 
+                onClick={nextImage}>
+                    {<FaChevronRight/>}
+                </div>
             </div>
             <div className="pop-carousel-container">
                 <h4 className='popular-title'>Popular Games Today</h4>
