@@ -26,10 +26,9 @@ export default (server) => {
     const media_directory = join(this_directory, "../../public/media")
     server.use(server_static_directory(media_directory))
 
-    // Applies a rate limiting of 100 requests per 1 minute window
-    server.use(express_rate_limit({
+    // Applies a rate limiting of 500 requests per 1 minute window
+    /* server.use(express_rate_limit({
         windowMs: 1 * 60 * 1000,
         max: 500,
-    }))
-
+    })) */
 }
