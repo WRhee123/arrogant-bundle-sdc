@@ -5,13 +5,11 @@
     margin: 0 auto;
 }
 
-
 .pop-carousel-container{
     max-width: 1200px;
     margin: 0 auto;
     overflow-x:hidden;
 }
-
 
 .popular-title{
     font-size:.9rem;
@@ -50,7 +48,6 @@
     opacity:.2;
 }
 
-
 div.pop-next {
   transform: translateX(55px);
   right: 10px;
@@ -60,10 +57,6 @@ div.pop-prev {
   transform: translateX(-55px);
   left: 10px;
 }
-
-
-
-
 
 /* -------------------------------- POPULAR CAROUSEL CARDS */
 
@@ -131,7 +124,6 @@ div.pop-prev {
     z-index:100;
 }
 
-
 .card-footer{
     display:flex;
     flex-flow: row nowrap;
@@ -177,13 +169,13 @@ div.pop-prev {
 .card-price-ctn{
     display:flex;
     flex-flow: row nowrap;
+    /* justify-content: flex-end; */
     align-items: center;
     gap:.75rem;
-    justify-content:flex-end
 }
 
 .pop-price{
-    /* margin-left: 2rem; */
+    margin-left: 4.5rem;
     font-weight: 900;
     text-rendering: optimizeLegibility;
     color: var(--darkTitle);
@@ -194,7 +186,6 @@ div.pop-prev {
 }
 
 .pop-discount-ctn{
-    margin: 0 auto;
     font-weight: 900;
     text-rendering: optimizeLegibility;
     text-shadow: 0 3px 0 rgba(0,0,0,0.2);
@@ -252,6 +243,7 @@ div.pop-prev {
     justify-content: left;
     color:lightgray;
 }
+
 .store-discount-percent{
     width:100%;
 }

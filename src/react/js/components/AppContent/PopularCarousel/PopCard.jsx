@@ -2,6 +2,7 @@
 import '../../../../css/popularcarousel.css';
 import { useRef } from 'react'
 import { FaRegStar, FaStar} from "react-icons/fa";
+import PopCardTip from './PopCardTip';
 
 const PopCard = ({popGames, cardRef}) => {
 
@@ -65,6 +66,7 @@ const PopCard = ({popGames, cardRef}) => {
                             <p>-{game.deal}%</p>
                         </div>
                         <div className="pop-price-deal">${game.deal_price}</div>
+                        <PopCardTip game={game}/>
                         </>
                         
                     ) : (
@@ -75,9 +77,9 @@ const PopCard = ({popGames, cardRef}) => {
                     
                 </div>
             </div>
-        </div> 
-        ))
-        
+        </div> // end carousel card
+        ))  // end game map fx
+
     )
 }
 
