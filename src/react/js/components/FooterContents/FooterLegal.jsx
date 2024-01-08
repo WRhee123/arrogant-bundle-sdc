@@ -1,6 +1,5 @@
 import { LuDot } from "react-icons/lu";
 
-
 const FooterLegal = () => {
     return (
         <>

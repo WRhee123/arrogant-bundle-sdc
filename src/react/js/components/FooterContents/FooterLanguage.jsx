@@ -5,18 +5,16 @@ import { RiArrowDownSFill } from "react-icons/ri";
 
 
 const FooterLanguage = () => {
-
     const [dropdownVisible, setDropdownVisible] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState("English")
-
+    // Change language selection in the language dropdown
     const changeLanguage = (language) => {
         setCurrentLanguage(language);
     }
-
+    //Dropdown functionality
     const handleButtonClick = (e) => {
         setDropdownVisible(!dropdownVisible);
     };
-
 
     return (
         <>
