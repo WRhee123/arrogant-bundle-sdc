@@ -11,13 +11,17 @@ import Footer from "./Footer.jsx"
 import ShoppingCartContext from "./ShoppingCartContext/ShoppingCartContext.mjs"
 import { useState, useEffect, useContext } from "react"
 import getProductData from "../api.js"
+import Bundle from "./Bundle.jsx"
+import Store from "./Store.jsx"
+import About from "./About.jsx"
 
 // TODO put the div containers into their own components
 // TODO Context API for all app images and text content?
 const App = () => {
     
     const {
-        cartDisplay
+        cartDisplay,
+        bundleDisplay
     } = useContext(ShoppingCartContext)
 
     const [isLoading, setIsLoading] = useState(true)
@@ -39,7 +43,7 @@ const App = () => {
     if (!isLoading) {
         return (
             <>
-                   {!cartDisplay ? '' : <CurtainModal productData={productData} setProductData={setProductData} />} 
+                   {cartDisplay && <CurtainModal productData={productData} setProductData={setProductData} />}
                     <Banner />
                     <Navbar />
                     <div className='body ctn'>

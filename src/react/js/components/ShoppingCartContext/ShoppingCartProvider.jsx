@@ -13,6 +13,10 @@ const ShoppingCartProvider = ({children}) => {
   const [addToWishlist, setAddToWishlist] = useState(false)
   //state to increase the number of items in wishlist
   const [wishlistCount, setWishlistCount] = useState(0)
+  //state used to display menus for Bundle, Store, and About
+  const [bundleDisplay, setBundleDisplay] = useState(false)
+  const [storeDisplay, setStoreDisplay] = useState(false)
+  const [aboutDisplay, setAboutDisplay] = useState(false)
 
   //function to handle conditional rendering if the cart contains an item
   const handleCartItem = () => {
@@ -44,7 +48,22 @@ const ShoppingCartProvider = ({children}) => {
     setWishlistCount(wishlistCount + 1)
     console.log('added to wishlist')
   }
+  
 
+//functions to handle display of Bundle, Store, and About menus
+  const handleBundle = () => {
+    setBundleDisplay(true)
+    console.log(bundleDisplay)
+  }
+
+  const handleStore = () => {
+    setStoreDisplay()
+    console.log('Displaying Store')
+  }
+
+  const handleAbout = () => {
+    setAboutDisplay(true)
+  }
 
     
 
@@ -60,7 +79,10 @@ const ShoppingCartProvider = ({children}) => {
       setAddToWishlist,
       wishlistCount, 
       setWishlistCount,
-      addTo
+      addTo,
+      handleBundle,
+      handleStore,
+      handleAbout
       }} >
       {children}
     </ShoppingCartContext.Provider>

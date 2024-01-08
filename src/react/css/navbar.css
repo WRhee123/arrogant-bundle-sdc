@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
 
-
+:root{
+    /* CSS HEX Humble Pallette
+    - use via: cssProperty: var(--jet)
+    */
+    --apple-green: #8EA940ff;
+    --raisin-black: #252830ff;
+    --eerie-black: #191B19ff;
+    --jet: #2A2B29ff;
+    --french-gray: #D0D3D9ff;
+    --onyx: #363942ff;
+    --gold: #ef9943;
+}
 
 .nav-links {
     height:68px;
@@ -80,10 +91,11 @@
 #searchInput > input {
     background-color: transparent;
     border: none;
-    height: 30px;
+    height: 40px;
     width: 330px;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
+    font-weight: bold;
 }
 #searchInput > input::placeholder {
     color: #D0D3D9ff;
@@ -161,4 +173,43 @@
 #cart-icon,
 #star-icon {
     color: white;
+}
+
+/* POP UP DIVS====================================== */
+
+#Bundle-div {
+    border: none;
+    z-index: -1;
+    position: absolute;
+    background-color: var(--raisin-black);
+    height: 200px;
+    width: 150px;
+    margin-top: 15em;
+    margin-left: 40.8em;
+    box-shadow: 0px 5px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3em;
+    font-size: 12px;
+    text-align: left;
+}
+#Bundle-div > h2 {
+    margin-top: -30px;
+}
+
+#Store-div {
+
+}
+
+#About-div {
+
+}
+
+.pop-ups {
+    color: white;
+}
+.pop-ups > h2:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }

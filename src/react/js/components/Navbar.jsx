@@ -7,13 +7,18 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { IoMdWallet } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
+import Bundle from './Bundle';
+import About from './About';
+import Store from './Store';
 
 const Navbar = () => {
 
     const {
         cartItem,
         handleCartDisplay,
-        wishlistCount
+        wishlistCount,
+        handleBundle,
+        bundleDisplay
     } = useContext(ShoppingCartContext)
 
     return (
@@ -21,14 +26,22 @@ const Navbar = () => {
         <div className="nav ctn">
             <div className="nav-links">
                 <div id='humble-links' >
-                    <h1>ARROGANT BUNDLE</h1>
-                        <a href='https://www.humblebundle.com/bundles?_gl=1*1r5aa4r*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' >Bundles</a>
+                    <h1>Arrogant</h1>
+
+                        <div className='bundle-drop-ctn'>
+                            <a href='https://www.humblebundle.com/bundles?_gl=1*1r5aa4r*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' onMouseEnter={handleBundle} >Bundles</a>
+                            <Bundle/>
+                        </div>
+
+                        
 
                         <a href='https://www.humblebundle.com/store?_gl=1*9go6x7*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' >Store</a>
 
                         <a href='https://www.humblebundle.com/membership?_gl=1*1anwn3y*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' >Choice</a>
 
                     <h3>About</h3>
+                    <Store/>
+                    <About/>
                 </div>
 
                 <div id='search-signUp' >
