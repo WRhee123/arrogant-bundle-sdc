@@ -174,6 +174,11 @@ h1{
     margin-right: 6rem;
 }
 
+.refer-message {
+    margin-bottom: 1.715em;
+    margin-right: 1em;
+}
+
 
 .footer-content{
     max-width: 93.75rem;
@@ -277,21 +282,24 @@ h1{
     color: var(--gold);
 }
 
-.js-language-dropdown {
+.js-language-button {
     width: 20.375rem;
-    align-items: center;
     background-color: var(--eerie-black);
     color: white;
     padding: 5px;
-    display: flex;
-    flex-direction: row;
     height: 2rem;
-    text-transform: capitalize;
     max-width: 100%;
-    font-size: inherit;
     border: 1px solid ;
     border-radius: 4px;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .js-language-container {
+    display: flex;
+    font-size: inherit;
+    text-transform: capitalize;
   }
   
   .language-dropdown-container {
@@ -300,21 +308,28 @@ h1{
     display: inline-block;
     position: relative;
   }
+
+  .language-choice-container {
+    background-color: gray;
+    max-width: 100%;
+    border-radius: 4px;
+    border: 2px solid white;
+  }
   
   .language-container {
     margin-right: 0;
     margin-top: 0.625em;
     position: absolute;
-    background-color: gray;
-    max-width: 100%;
     overflow: hidden;
-    transition: .25s ease-in-out;
-    transition-property: max-height;
     z-index: 999;
-    border-radius: 4px;
-    border: 2px solid white;
+    max-height: 0; /* Set initial max-height to 0 */
+    transition: all 1s ease; /* Include transition in the default state */
   }
   
+  .language-container.open {
+    max-height: 200px; /* Set the desired max-height when open */
+  }
+
   .language-container button {
     padding: 0.313rem 1rem;
     text-decoration: none;
@@ -377,8 +392,7 @@ h1{
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin: .3rem;
-
+    margin: .2rem;
 }
 
 .logo:hover {
@@ -391,13 +405,34 @@ h1{
     margin-top: 15px;
 }
 
-.globe {
-    padding-right: .4rem;
-}
-
-.arrow {
-    padding-left: 10rem;
-}
+.globe-div {
+    padding-right: 0.4rem;
+  }
+  
+  .globe,
+  .globe-flip {
+    transform: rotate(0deg);
+    transition: transform .4s ease;
+  }
+  
+  .globe-flip {
+    transform: rotate(180deg);
+  }
+  
+  .arrow-div {
+    display: flex;
+    text-align: right;
+  }
+  
+  .arrow,
+  .arrow-flip {
+    transform: rotate(0deg);
+    transition: transform .4s ease;
+  }
+  
+  .arrow-flip {
+    transform: rotate(180deg);
+  }
 
 .add {
     transform: translate(0%, 25%);

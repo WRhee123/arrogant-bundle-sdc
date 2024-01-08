@@ -7,8 +7,7 @@ const FooterLanguagesDropdown = ( {changeLanguage} ) => {
     }
     return (
         <>
-        <div className="language-container">
-            
+        <div className="language-choice-container">
             <button id="Français" className="js-change-language" onClick={handleClick}>Français</button>
 
             <button id="English" data-locale="en" className="js-change-language" onClick={handleClick}>English</button>
