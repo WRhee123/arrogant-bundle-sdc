@@ -371,6 +371,11 @@ h1 {
 
 .footer {
     background-color: var(--onyx);
+    color: var(--french-gray);
+    font-size: .875rem;
+    padding-bottom: 3.125rem;
+    display: block;
+    box-sizing: border-box;
 }
 
 .footer-contents {
