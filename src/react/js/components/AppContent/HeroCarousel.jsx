@@ -32,7 +32,7 @@ const HeroCarousel = ({images, setCurrentIndex, currentIndex}) => {
                     >
                       {images.map((image, index) => (
                           <img
-                          key={index}
+                          key={image+index+'hero'}
                           className={`carousel-image ${index === currentIndex ? 'active' : ''}`}
                           src={`https://arrogant-bundle.onrender.com${image}`}
                           alt={`Image ${index + 1}`}

@@ -39,7 +39,7 @@ const product = {
     operating_systems: [
         {
             name: "Nintendo Switch",
-            image_link: "/images/operating_systems/nintendo-switch.png"
+            image_link: "/images/operating-systems/nintendo-switch.png"
         }
     ],
     publisher: "Nintendo",

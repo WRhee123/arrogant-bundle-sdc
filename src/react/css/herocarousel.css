@@ -29,9 +29,6 @@
   .nav-button {
     position: absolute;
     top: 35%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
     font-size: 2.2rem;
     cursor: pointer;
     z-index: 100;
@@ -41,13 +38,6 @@
 
   .nav-button:hover {
     color: white;
-  }
-
-  div.next,
-  div.prev {
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
   }
   
   div.next {

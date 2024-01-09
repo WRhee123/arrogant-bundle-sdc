@@ -5,7 +5,7 @@ import Hero from "./AppContent/Hero.jsx"
 import ProductDetails from "./AppContent/ProductDetails.jsx"
 import ProductDescription from "./AppContent/ProductDescription.jsx"
 import CriticalReception from "./AppContent/CriticalReception.jsx"
-import PopularCarousel from "./AppContent/PopularCarousel.jsx"
+import PopularCarousel from "./AppContent/PopularCarousel/PopularCarousel.jsx"
 import SystemReq from "./AppContent/SystemReq.jsx"
 import Footer from "./Footer.jsx"
 import ShoppingCartContext from "./ShoppingCartContext/ShoppingCartContext.mjs"
@@ -43,20 +43,20 @@ const App = () => {
     if (!isLoading) {
         return (
             <>
-                   {cartDisplay && <CurtainModal productData={productData} setProductData={setProductData} />}
-                    <Banner />
-                    <Navbar />
-                    <div className='body ctn'>
-                        <div className="app-content ctn">
-                            <Hero productData={productData} />
-                            <ProductDetails />
-                            <ProductDescription />
-                            <CriticalReception criticalReceptions={productData.critical_receptions} />
-                            <PopularCarousel />
-                            <SystemReq systemRequirements={productData.system_requirements} />
-                        </div> {/* end app-content ctn */}
-                    </div> {/* end body ctn */}
-                    <Footer />
+                {cartDisplay && <CurtainModal productData={productData} setProductData={setProductData} />}
+                <Banner />
+                <Navbar />
+                <div className='body ctn'>
+                    <div className="app-content ctn">
+                        <Hero productData={productData} />
+                        <ProductDetails platforms={productData.platforms} publisher={productData.publisher} operatingSystems={productData.operating_systems} links={productData.links} rating={productData.rating} />
+                        <ProductDescription />
+                        <CriticalReception criticalReceptions={productData.critical_receptions} />
+                        <PopularCarousel productData={productData}/>
+                        <SystemReq systemRequirements={productData.system_requirements} />
+                    </div> {/* end app-content ctn */}
+                </div> {/* end body ctn */}
+                <Footer />
             </>
         )
     }
