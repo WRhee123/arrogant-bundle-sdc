@@ -2,7 +2,7 @@ import { useState } from "react"
 import { RiArrowDownSFill } from "react-icons/ri";
 
 const ProductDescription = () => {
-const [showMore, setShowMore] = useState(true);
+const [showMore, setShowMore] = useState(false);
 
 const handleClick = (e) => {
     setShowMore(!showMore);
