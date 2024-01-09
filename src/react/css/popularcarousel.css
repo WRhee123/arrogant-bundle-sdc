@@ -178,6 +178,8 @@ div.pop-prev {
 }
 
 .pop-price{
+    width:90px;
+    text-align: center;
     margin-left: 4.5rem;
     font-weight: 900;
     text-rendering: optimizeLegibility;
@@ -186,6 +188,12 @@ div.pop-prev {
     padding:.25rem .9rem;
     border-radius: .3rem;
     border: 1px solid var(--darkTitle)
+}
+.pop-price>div{
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:center;
+    gap:.25rem;
 }
 
 .pop-discount-ctn{
@@ -214,10 +222,6 @@ div.pop-prev {
     background-color: var(--apple-green);
     color:white;
     border: none;
-}
-
-.card-price-ctn:hover .pop-hover::before {
-    content: "Add Item"; /* Replace with the desired new text */
 }
 
 /* ------------------------- TOOLTIP SECTION */

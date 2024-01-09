@@ -1,15 +1,28 @@
 
 import '../../../../css/popularcarousel.css';
-import { useRef } from 'react'
-import { FaRegStar, FaStar} from "react-icons/fa";
+import { useRef, useState } from 'react'
+import { FaRegStar, FaStar, FaShoppingCart } from "react-icons/fa";
 import PopCardTip from './PopCardTip';
 
 const PopCard = ({popGames, cardRef}) => {
-
+    const [hoveredIndex, setHoveredIndex] = useState(null);
     const priceRef = useRef(null)
+    // const buyHoverRef = useRef(null)
+
+    const handleHover = (index) => {
+        setHoveredIndex(index);
+    };
+
+    const handleLeave = () => {
+        setHoveredIndex(null);
+    };
 
     const starClick = (e) => {
         console.log('starclicked')
+    }
+
+    const addToCart = (game) => {
+        console.log('add to cart', game.title)
     }
 
     return (
@@ -60,19 +73,33 @@ const PopCard = ({popGames, cardRef}) => {
                     <div className="card-price-ctn">
                         {game.deal ? (
                             <>
-                            <div className='pop-discount-ctn' 
-                                ref={priceRef}
-                                data-tooltip-id="discount-tip"
-                            >
-                                <p>-{game.deal}%</p>
-                            </div>
-                            <div className="pop-price-deal pop-hover">${game.deal_price}</div>
-                            <PopCardTip game={game}/>
+                                <div className='pop-discount-ctn' 
+                                    ref={priceRef}
+                                    data-tooltip-id="discount-tip"
+                                >
+                                    <p>-{game.deal}%</p>
+                                </div>
+                                <div 
+                                className="pop-price-deal pop-hover"
+                                onMouseEnter={() => handleHover(index)}
+                                onMouseLeave={handleLeave}
+                                onClick={()=>{addToCart(game)}}
+                                >
+                                    {hoveredIndex === index ? <div><FaShoppingCart /> Add</div>: game.deal_price}
+                                </div>
+                                <PopCardTip game={game}/>
                             </>
                             
                         ) : (
                             <>
-                            <div className="pop-price pop-hover">${game.price}</div>
+                                <div 
+                                className="pop-price pop-hover"
+                                onMouseEnter={() => handleHover(index)}
+                                onMouseLeave={handleLeave}
+                                onClick={()=>{addToCart(game)}}
+                                >
+                                    {hoveredIndex === index ? <div><FaShoppingCart /> Add</div> : game.price}
+                                </div>
                             </>
                         )}
                         
