@@ -18,8 +18,10 @@ const Navbar = () => {
         handleCartDisplay,
         wishlistCount,
         handleBundle,
-        bundleDisplay
+
     } = useContext(ShoppingCartContext)
+
+    // bundleDisplay
 
     return (
     <>
@@ -29,15 +31,22 @@ const Navbar = () => {
                     <h1>Arrogant</h1>
 
                         <div className='bundle-drop-ctn'>
-                            <a href='https://www.humblebundle.com/bundles?_gl=1*1r5aa4r*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' onMouseEnter={handleBundle} >Bundles</a>
+                            <a
+                                href='https://www.humblebundle.com/bundles?_gl=1*1r5aa4r*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' 
+                                target='_blank' 
+                                onMouseEnter={handleBundle} 
+                                rel="noreferrer" 
+                            >
+                                Bundles
+                            </a>
                             <Bundle/>
                         </div>
 
                         
 
-                        <a href='https://www.humblebundle.com/store?_gl=1*9go6x7*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' >Store</a>
+                        <a href='https://www.humblebundle.com/store?_gl=1*9go6x7*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' rel="noreferrer" >Store</a>
 
-                        <a href='https://www.humblebundle.com/membership?_gl=1*1anwn3y*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' >Choice</a>
+                        <a href='https://www.humblebundle.com/membership?_gl=1*1anwn3y*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' rel="noreferrer" >Choice</a>
 
                     <h3>About</h3>
                     <Store/>
@@ -49,9 +58,9 @@ const Navbar = () => {
                         <input type="search" placeholder='Search'/>
                         <FaSearch />
                     </div>
-                        <a href='https://www.humblebundle.com/signup?hmb_source=navbar&goto=%2Fstore%2Fsuper-mario-rpg-switch&qs=hmb_source%3Dsearch_bar%26_gl%3D1*1gtdzz5*_up*MQ..%26gclid%3DCj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank'>Sign Up</a>
+                        <a href='https://www.humblebundle.com/signup?hmb_source=navbar&goto=%2Fstore%2Fsuper-mario-rpg-switch&qs=hmb_source%3Dsearch_bar%26_gl%3D1*1gtdzz5*_up*MQ..%26gclid%3DCj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' rel="noreferrer">Sign Up</a>
 
-                        <a href='https://www.humblebundle.com/login?hmb_source=navbar&goto=%2Fstore%2Fsuper-mario-rpg-switch&qs=hmb_source%3Dsearch_bar%26_gl%3D1*1gtdzz5*_up*MQ..%26gclid%3DCj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank'>Log In</a>
+                        <a href='https://www.humblebundle.com/login?hmb_source=navbar&goto=%2Fstore%2Fsuper-mario-rpg-switch&qs=hmb_source%3Dsearch_bar%26_gl%3D1*1gtdzz5*_up*MQ..%26gclid%3DCj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' rel="noreferrer">Log In</a>
                 </div>
             </div>
             
@@ -59,7 +68,7 @@ const Navbar = () => {
                 <div id='charity-links' >
                     <a>Choose Charity</a>
 
-                    <a href='https://www.humblebundle.com/refer?hmb_source=store_navbar&_gl=1*lnfe7u*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank'>Earn Wallet Credit</a>
+                    <a href='https://www.humblebundle.com/refer?hmb_source=store_navbar&_gl=1*lnfe7u*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' rel="noreferrer">Earn Wallet Credit</a>
                 </div>
                 <div id='wallet-cart'>
                     <>
