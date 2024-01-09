@@ -1,5 +1,6 @@
 import '../../../../css/popularcarousel.css';
 import { Tooltip } from 'react-tooltip';
+import { TiArrowRightThick } from "react-icons/ti";
 
 const PopCardTip = ({game}) => {
     
@@ -15,7 +16,7 @@ const PopCardTip = ({game}) => {
             </div>
             <div className="store-discount-amount">
                 <span className='old-price'>${game.price} </span>
-                <img src="https://cdn.humblebundle.com/static/hashed/14ba8ecd2fd68f1d77c8c41f0d0f48486c30da74.svg" alt="hb arrow"/>
+                <span className='arrow-discount'><TiArrowRightThick/></span>
                 {game.deal_price}
             </div>
             

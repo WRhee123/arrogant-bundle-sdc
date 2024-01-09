@@ -44,10 +44,6 @@
     color: white;
 }
 
-/* .pop-nav-btn:hover {
-    color: white;
-} */
-
 .unscrollable{
     opacity:.2;
 }
@@ -135,11 +131,6 @@ div.pop-prev {
     border-top:  1px solid #eee;
     background-color: var(--offwhite);
     gap:.5rem;
-}
-
-.tip-ctn{
-    background-color: var(--darkTitle);
-    color:blue;
 }
 
 .card-systems-box{
@@ -259,6 +250,12 @@ div.pop-prev {
     /* gap:.5rem; */
     justify-content: left;
     color:lightgray;
+}
+
+.arrow-discount{
+    color: var(--apple-green);
+    font-weight: bolder;
+    font-size:.8rem;
 }
 
 .store-discount-percent{

@@ -1,4 +1,3 @@
-
 import '../../../../css/popularcarousel.css';
 import { useRef, useState } from 'react'
 import { FaRegStar, FaStar, FaShoppingCart } from "react-icons/fa";
@@ -7,7 +6,6 @@ import PopCardTip from './PopCardTip';
 const PopCard = ({popGames, cardRef}) => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const priceRef = useRef(null)
-    // const buyHoverRef = useRef(null)
 
     const handleHover = (index) => {
         setHoveredIndex(index);

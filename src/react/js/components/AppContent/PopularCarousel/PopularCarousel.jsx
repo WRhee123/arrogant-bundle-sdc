@@ -3,7 +3,6 @@ import {FaChevronRight, FaChevronLeft} from "react-icons/fa";
 import { useState, useRef } from 'react';
 import PopCard from './PopCard';
 
-
 // TODO conditional rendering based on genre
 const PopularCarousel = ({productData}) => {
 
@@ -55,7 +54,6 @@ const PopularCarousel = ({productData}) => {
             </div> {/* end pop-carousel-container*/}
         </div> {/* end pop-carousel-section*/}
     </>
-
     )
 }
 
