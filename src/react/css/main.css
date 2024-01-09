@@ -1,4 +1,6 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
+:root{
     /* CSS HEX Humble Pallette
     - use via: cssProperty: var(--jet)
     */
@@ -45,33 +47,12 @@ h1 {
     margin: 0 auto;
 }
 
-/* for dev purposes to display flex areas */
-.ctn {
-    border: 1px solid rgb(116, 114, 114);
-    /* width:100%; */
-}
-
 .nav {
     position: sticky;
     background-color: var(--onyx);
     color: white;
     z-index: 300;
     top: 0;
-}
-
-.nav-links {
-    height: 60px;
-    z-index: 200;
-}
-
-.nav hr {
-    background-color: var(--raisin-black);
-    height: 1px;
-
-}
-
-.charity-nav {
-    height: 50px;
 }
 
 #banner {

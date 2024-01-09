@@ -1,5 +1,6 @@
 import Banner from "./Banner.jsx"
-import Navbar from "./NavBar.jsx"
+import CurtainModal from "./CurtainModal.jsx"
+import Navbar from "./Navbar.jsx"
 import Hero from "./AppContent/Hero.jsx"
 import ProductDetails from "./AppContent/ProductDetails.jsx"
 import ProductDescription from "./AppContent/ProductDescription.jsx"
@@ -7,12 +8,21 @@ import CriticalReception from "./AppContent/CriticalReception.jsx"
 import PopularCarousel from "./AppContent/PopularCarousel/PopularCarousel.jsx"
 import SystemReq from "./AppContent/SystemReq.jsx"
 import Footer from "./Footer.jsx"
-import { useState, useEffect } from "react"
+import ShoppingCartContext from "./ShoppingCartContext/ShoppingCartContext.mjs"
+import { useState, useEffect, useContext } from "react"
 import getProductData from "../api.js"
+import Bundle from "./Bundle.jsx"
+import Store from "./Store.jsx"
+import About from "./About.jsx"
 
 // TODO put the div containers into their own components
 // TODO Context API for all app images and text content?
 const App = () => {
+    
+    const {
+        cartDisplay,
+        bundleDisplay
+    } = useContext(ShoppingCartContext)
 
     const [isLoading, setIsLoading] = useState(true)
     const [productData, setProductData] = useState({})
@@ -33,6 +43,7 @@ const App = () => {
     if (!isLoading) {
         return (
             <>
+                {cartDisplay && <CurtainModal productData={productData} setProductData={setProductData} />}
                 <Banner />
                 <Navbar />
                 <div className='body ctn'>
