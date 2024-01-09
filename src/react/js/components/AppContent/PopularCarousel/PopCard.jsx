@@ -85,7 +85,7 @@ const PopCard = ({popGames, cardRef}) => {
                                 onMouseLeave={handleLeave}
                                 onClick={()=>{addToCart(game)}}
                                 >
-                                    {hoveredIndex === index ? <div><FaShoppingCart /> Add</div>: game.deal_price}
+                                    {hoveredIndex === index ? <div><FaShoppingCart /> Add</div> : `$${game.deal_price}`}
                                 </div>
                                 <PopCardTip game={game}/>
                             </>
@@ -98,7 +98,7 @@ const PopCard = ({popGames, cardRef}) => {
                                 onMouseLeave={handleLeave}
                                 onClick={()=>{addToCart(game)}}
                                 >
-                                    {hoveredIndex === index ? <div><FaShoppingCart /> Add</div> : game.price}
+                                    {hoveredIndex === index ? <div><FaShoppingCart /> Add</div> : `$${game.price}`}
                                 </div>
                             </>
                         )}
