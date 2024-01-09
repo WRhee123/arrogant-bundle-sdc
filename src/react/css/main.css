@@ -6,9 +6,12 @@
     --raisin-black: #252830ff;
     --eerie-black: #191B19ff;
     --jet: #2A2B29ff;
+    --offwhite: #f9f9f9;
+    --offgray: rgba(128, 128, 128, 0.32);
     --french-gray: #d0d3d9;
     --onyx: #363942ff;
     --gold: #ef9943;
+    --darkTitle: #494f5c;
 }
 
 * {
@@ -303,6 +306,12 @@ h1 {
     padding-top: 35px;
     width: 1754px;
     -webkit-font-smoothing: antialiased;
+}
+
+#pop-carousel-section{
+    background-color: var(--onyx);
+    width:100%;
+    padding: 35px 0;
 }
 
 .critical-reception-heading {

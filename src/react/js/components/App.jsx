@@ -4,7 +4,7 @@ import Hero from "./AppContent/Hero.jsx"
 import ProductDetails from "./AppContent/ProductDetails.jsx"
 import ProductDescription from "./AppContent/ProductDescription.jsx"
 import CriticalReception from "./AppContent/CriticalReception.jsx"
-import PopularCarousel from "./AppContent/PopularCarousel.jsx"
+import PopularCarousel from "./AppContent/PopularCarousel/PopularCarousel.jsx"
 import SystemReq from "./AppContent/SystemReq.jsx"
 import Footer from "./Footer.jsx"
 import { useState, useEffect } from "react"
@@ -41,7 +41,7 @@ const App = () => {
                         <ProductDetails platforms={productData.platforms} publisher={productData.publisher} operatingSystems={productData.operating_systems} links={productData.links} rating={productData.rating} />
                         <ProductDescription />
                         <CriticalReception criticalReceptions={productData.critical_receptions} />
-                        <PopularCarousel />
+                        <PopularCarousel productData={productData}/>
                         <SystemReq systemRequirements={productData.system_requirements} />
                     </div> {/* end app-content ctn */}
                 </div> {/* end body ctn */}
