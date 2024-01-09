@@ -1,11 +1,8 @@
 
-import ShoppingCartContext from "./ShoppingCartContext/ShoppingCartContext.mjs"
-import { useContext } from "react"
+
 
 
 const Bundle = () => {
-// const {bundleDisplay} = useContext(ShoppingCartContext)
-    // console.log('inside Bundle')
   return (
     <div id='Bundle-div' className="pop-ups">
       <h2>Games</h2>

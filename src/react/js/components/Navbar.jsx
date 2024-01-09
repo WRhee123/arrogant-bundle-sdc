@@ -33,8 +33,7 @@ const Navbar = () => {
                         <div className='bundle-drop-ctn'>
                             <a
                                 href='https://www.humblebundle.com/bundles?_gl=1*1r5aa4r*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' 
-                                target='_blank' 
-                                onMouseEnter={handleBundle} 
+                                target='_blank'  
                                 rel="noreferrer" 
                             >
                                 Bundles
@@ -43,14 +42,24 @@ const Navbar = () => {
                         </div>
 
                         
+                        <div className='store-drop-ctn' >
+                            <a 
+                                href='https://www.humblebundle.com/store?_gl=1*9go6x7*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' 
+                                target='_blank' 
+                                rel="noreferrer" 
+                        >
+                                Store
+                            </a>
+                            <Store/>
+                        </div>
 
-                        <a href='https://www.humblebundle.com/store?_gl=1*9go6x7*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' rel="noreferrer" >Store</a>
 
                         <a href='https://www.humblebundle.com/membership?_gl=1*1anwn3y*_up*MQ..&gclid=Cj0KCQiA7aSsBhCiARIsALFvovx4p9Kgl2la2vY0lMhC7YZQ8P5Qjrbq065c67_s9wWRKTkIXH8IZZcaAtI6EALw_wcB' target='_blank' rel="noreferrer" >Choice</a>
 
-                    <h3>About</h3>
-                    <Store/>
-                    <About/>
+                        <div className='about-drop-ctn'>
+                            About
+                            <About/>
+                        </div>    
                 </div>
 
                 <div id='search-signUp' >

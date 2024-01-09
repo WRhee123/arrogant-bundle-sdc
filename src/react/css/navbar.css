@@ -33,7 +33,6 @@
     display: flex;
     flex-direction: row;
     margin-left: 12em;
-    /* margin-top: 10px; */
     justify-content: center;
     align-items: center;
 }
@@ -46,7 +45,6 @@
     margin-left: 20px;
     color: #D0D3D9ff;
     font-size: 15px;
-    margin-top: -5px;
     cursor: pointer;
     transition: color .5s;
     font-weight: bold;
@@ -56,18 +54,7 @@
     color: white;
     text-decoration: underline;
 }
-#humble-links > h3 {
-    margin-left: 20px;
-    color: #D0D3D9ff;
-    font-size: 15px;
-    margin-top: -5px;
-    cursor: pointer;
-    transition: color .5s;
-    font-weight: bold;
-}
-#humble-links > h3:hover {
-    color: white;
-}
+
 
 #search-signUp {
     display: flex;
@@ -183,13 +170,14 @@
 /* POP UP DIVS====================================== */
 
 .bundle-drop-ctn{
+    display: flex;
+    align-items: center;
     position: relative;
-    padding:1.5rem;
-    margin-left: 20px;
+    height: 70px;
+    margin-left: 25px;
     color: #D0D3D9ff;
     font-size: 15px;
     cursor: pointer;
-    transition: color .5s;
     font-weight: bold;
     text-decoration: none;
 }
@@ -198,29 +186,33 @@
     position:absolute;
     display: flex;
     flex-flow: column wrap;
-    gap:2rem;
-    top: 65px;
-    left:1.5rem;
+    gap:1rem;
+    top: 55px;
+    left:.3rem;
     border: none;
-    background-color: var(--raisin-black);
-    box-shadow: 0px 5px 5px black;
-
+    background-color: var(--onyx);
+    box-shadow: 0px -.5px 15px var(--jet);
     justify-content: space-around;
-    font-size: 12px;
+    font-size: 11px;
     overflow:hidden;
     width:0px;
     height:0px;
     padding:0rem;
-    /* transition: .3s all linear; */
+}
+
+.bundle-drop-ctn > a{
+    color: #D0D3D9ff;
 }
 
 .bundle-drop-ctn:hover > a{
+    color: white;
     text-decoration: underline;
+    transition: color .5s;
 }
 
 .bundle-drop-ctn:hover #Bundle-div{
-    width:auto;
-    height:auto;
+    width:150px;
+    height:200px;
     padding:2.5rem;
     overflow:visible;
 }
@@ -229,17 +221,128 @@
     text-decoration: underline;
 }
 
+/* STORE DROPDOWN STYLING======================== */
+.store-drop-ctn {
+    width: 70px;
+    position: relative;
+    padding:1.5rem;
+    margin-left: 5px;
+    color: #D0D3D9ff;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+} 
 
 #Store-div {
-
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+    top: 55px;
+    left:1.5rem;
+    border: none;
+    background-color: var(--onyx);
+    box-shadow: 0px -.5px 15px var(--jet);
+    justify-content: space-around;
+    font-size: 12px;
+    overflow:hidden;
+    width:0px;
+    height:0px;
+    padding:0rem;
+    text-align: left;
 }
+
+.store-div-h1 {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 2em;
+    font-weight: bolder;
+    cursor: auto;
+}
+
+.store-div-list > h2 {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.store-div-list > h2:hover {
+    text-decoration: underline;
+}
+
+.store-drop-ctn > a {
+    color: #D0D3D9ff;
+}
+
+.store-drop-ctn:hover > a {
+    transition: color .5s;
+    text-decoration: underline;
+    color: white;
+}
+
+.store-drop-ctn:hover #Store-div {
+    width:840px;
+    height:auto;
+    padding:2.5rem;
+    overflow:visible;
+}
+
+/* ABOUT DROPDOWN STYLING======================== */
+.about-drop-ctn {
+    width: 70px;
+    position: relative;
+    padding:1.5rem;
+    color: #D0D3D9ff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color .5s;
+    font-weight: bold;
+    text-decoration: none;
+} 
 
 #About-div {
-
+    position:absolute;
+    display: flex;
+    flex-flow: column wrap;
+    gap:2rem;
+    top: 55px;
+    left:1.5rem;
+    border: none;
+    background-color: var(--onyx);
+    box-shadow: 0px -.5px 15px var(--jet);
+    justify-content: space-around;
+    overflow:hidden;
+    width:0px;
+    height:0px;
 }
+
+#About-div > h1 {
+    font-size: 17px;
+    margin-bottom: -10px;
+    color: white;
+}
+
+#About-div > h1:hover {
+    text-decoration: underline;
+}
+
+.about-drop-ctn:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.about-drop-ctn:hover #About-div {
+    width:auto;
+    height:auto;
+    padding:2.5rem;
+    overflow:visible;
+}
+
+
 
 .pop-ups {
     color: white;
-    text-decoration: none;
     
 }
