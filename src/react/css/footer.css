@@ -1,5 +1,9 @@
 /* --------------------------------------------------FOOTER SECTION */
 
+.brand h1 {
+  font-family: 'Galada';
+}
+
 .footer .max-width-wrapper {
     margin: auto;
     max-width: 93.75rem;
